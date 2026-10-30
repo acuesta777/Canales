@@ -1,0 +1,502 @@
+<title>YouTube Niche Intel</title>
+<style>
+:root {
+  --bg: #F3F4F8;
+  --surface: #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --border: #D4D8E4;
+  --border-focus: #A0A8C0;
+  --text: #141824;
+  --text-muted: #636B83;
+  --text-faint: #9CA3B8;
+  --accent-growth: #059669;
+  --accent-growth-bg: #D1FAE5;
+  --accent-revenue: #D97706;
+  --accent-revenue-bg: #FEF3C7;
+  --accent-celeb: #7C3AED;
+  --accent-celeb-bg: #EDE9FE;
+  --accent-outlier: #2563EB;
+  --accent-outlier-bg: #DBEAFE;
+  --danger: #DC2626;
+  --danger-bg: #FEE2E2;
+  --bar-track: #E5E7EB;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,.08);
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A0E1A;
+    --surface: #131829;
+    --surface-raised: #1A2035;
+    --border: #262E48;
+    --border-focus: #3D4768;
+    --text: #E2E6F0;
+    --text-muted: #7B839C;
+    --text-faint: #4E566E;
+    --accent-growth: #34D399;
+    --accent-growth-bg: rgba(52,211,153,.12);
+    --accent-revenue: #FBBF24;
+    --accent-revenue-bg: rgba(251,191,36,.10);
+    --accent-celeb: #A78BFA;
+    --accent-celeb-bg: rgba(167,139,250,.12);
+    --accent-outlier: #60A5FA;
+    --accent-outlier-bg: rgba(96,165,250,.10);
+    --danger: #F87171;
+    --danger-bg: rgba(248,113,113,.10);
+    --bar-track: #1F2740;
+    --shadow: 0 1px 3px rgba(0,0,0,.3);
+    --shadow-lg: 0 4px 16px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A0E1A;
+  --surface: #131829;
+  --surface-raised: #1A2035;
+  --border: #262E48;
+  --border-focus: #3D4768;
+  --text: #E2E6F0;
+  --text-muted: #7B839C;
+  --text-faint: #4E566E;
+  --accent-growth: #34D399;
+  --accent-growth-bg: rgba(52,211,153,.12);
+  --accent-revenue: #FBBF24;
+  --accent-revenue-bg: rgba(251,191,36,.10);
+  --accent-celeb: #A78BFA;
+  --accent-celeb-bg: rgba(167,139,250,.12);
+  --accent-outlier: #60A5FA;
+  --accent-outlier-bg: rgba(96,165,250,.10);
+  --danger: #F87171;
+  --danger-bg: rgba(248,113,113,.10);
+  --bar-track: #1F2740;
+  --shadow: 0 1px 3px rgba(0,0,0,.3);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace; font-variant-numeric: tabular-nums; }
+
+.dashboard { max-width: 1400px; margin: 0 auto; padding: 24px 20px 60px; }
+
+/* Header */
+.header { margin-bottom: 36px; }
+.header h1 {
+  font-size: 28px; font-weight: 700; letter-spacing: -0.5px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.header .subtitle { font-size: 14px; color: var(--text-muted); }
+.header .date { font-size: 12px; color: var(--text-faint); margin-top: 2px; }
+
+/* Section */
+.section { margin-bottom: 48px; }
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section-dot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.section-dot.growth { background: var(--accent-growth); }
+.section-dot.celeb { background: var(--accent-celeb); }
+.section-title { font-size: 18px; font-weight: 600; }
+.section-count {
+  font-size: 11px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase;
+  color: var(--text-muted); background: var(--surface); border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 20px;
+}
+.section-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.6; }
+
+/* KPI strip */
+.kpi-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px; margin-bottom: 20px;
+}
+.kpi {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px 16px;
+  box-shadow: var(--shadow);
+}
+.kpi-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 4px; }
+.kpi-value { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.kpi-value.growth { color: var(--accent-growth); }
+.kpi-value.revenue { color: var(--accent-revenue); }
+.kpi-value.celeb { color: var(--accent-celeb); }
+.kpi-value.outlier { color: var(--accent-outlier); }
+.kpi-sub { font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+
+/* Sort controls */
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+.controls-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .4px; margin-right: 4px; }
+.sort-btn {
+  font-size: 12px; font-weight: 500; padding: 5px 12px;
+  border-radius: 20px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-muted);
+  cursor: pointer; transition: all .15s;
+  font-family: inherit;
+}
+.sort-btn:hover { border-color: var(--border-focus); color: var(--text); }
+.sort-btn.active { background: var(--accent-growth); color: #fff; border-color: var(--accent-growth); }
+.sort-btn.active.celeb { background: var(--accent-celeb); border-color: var(--accent-celeb); }
+.filter-toggle {
+  font-size: 12px; font-weight: 500; padding: 5px 12px;
+  border-radius: 20px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-muted);
+  cursor: pointer; transition: all .15s; font-family: inherit;
+  margin-left: auto;
+}
+.filter-toggle:hover { border-color: var(--border-focus); }
+.filter-toggle.active { background: var(--accent-outlier-bg); color: var(--accent-outlier); border-color: var(--accent-outlier); }
+
+/* Channel grid */
+.channel-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 14px;
+}
+@media (max-width: 860px) { .channel-grid { grid-template-columns: 1fr; } }
+
+/* Channel card */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px;
+  box-shadow: var(--shadow); transition: box-shadow .15s, border-color .15s;
+  position: relative;
+}
+.card:hover { box-shadow: var(--shadow-lg); border-color: var(--border-focus); }
+.card-top { display: flex; gap: 12px; margin-bottom: 12px; }
+.card-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--bar-track); flex-shrink: 0;
+  object-fit: cover;
+}
+.card-info { flex: 1; min-width: 0; }
+.card-name {
+  font-size: 14px; font-weight: 600; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.card-name a { color: inherit; text-decoration: none; }
+.card-name a:hover { text-decoration: underline; }
+.card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 3px; }
+.pill {
+  font-size: 10px; font-weight: 600; letter-spacing: .3px;
+  padding: 1px 7px; border-radius: 10px; text-transform: uppercase;
+  white-space: nowrap;
+}
+.pill.faceless { background: var(--accent-growth-bg); color: var(--accent-growth); }
+.pill.ai { background: var(--accent-outlier-bg); color: var(--accent-outlier); }
+.pill.quality-high { background: var(--accent-revenue-bg); color: var(--accent-revenue); }
+.pill.category { background: var(--surface-raised); color: var(--text-muted); border: 1px solid var(--border); }
+.pill.country { background: var(--surface-raised); color: var(--text-faint); border: 1px solid var(--border); }
+.pill.monetized { background: var(--accent-revenue-bg); color: var(--accent-revenue); }
+.pill.not-monetized { background: var(--danger-bg); color: var(--danger); }
+
+.card-rank {
+  position: absolute; top: 10px; right: 14px;
+  font-size: 11px; font-weight: 700; color: var(--text-faint);
+}
+
+/* Metrics grid inside card */
+.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+.metric { display: flex; flex-direction: column; gap: 2px; }
+.metric-label { font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: .3px; }
+.metric-row { display: flex; align-items: baseline; gap: 6px; }
+.metric-value { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.metric-bar-wrap { flex: 1; height: 4px; background: var(--bar-track); border-radius: 2px; overflow: hidden; margin-top: 2px; }
+.metric-bar { height: 100%; border-radius: 2px; transition: width .3s; }
+.metric-bar.growth { background: var(--accent-growth); }
+.metric-bar.revenue { background: var(--accent-revenue); }
+.metric-bar.outlier { background: var(--accent-outlier); }
+.metric-bar.celeb { background: var(--accent-celeb); }
+
+.card-desc {
+  font-size: 12px; color: var(--text-muted); margin-top: 10px;
+  line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* Videos mini list */
+.card-videos { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 8px; }
+.card-videos-title { font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: .3px; margin-bottom: 6px; }
+.video-row {
+  display: flex; align-items: center; gap: 8px; padding: 3px 0;
+  font-size: 12px; color: var(--text-muted);
+}
+.video-row .v-title {
+  flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.video-row .v-views { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.video-row .v-len { font-size: 11px; color: var(--text-faint); flex-shrink: 0; }
+
+/* Sleep tag */
+.sleep-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 600; color: var(--accent-celeb);
+  background: var(--accent-celeb-bg); padding: 2px 8px; border-radius: 10px;
+}
+
+/* No results */
+.no-results { text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard { padding: 16px 12px 40px; }
+  .header h1 { font-size: 22px; }
+  .kpi-strip { grid-template-columns: 1fr 1fr; }
+  .channel-grid { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: 1fr 1fr; gap: 6px 10px; }
+}
+</style>
+
+<div class="dashboard">
+  <div class="header">
+    <h1>YouTube Niche Intelligence</h1>
+    <div class="subtitle">Canales emergentes con alto potencial de crecimiento y monetizacion</div>
+    <div class="date">Datos: Nexlev Analytics &mdash; 30 agosto 2026</div>
+  </div>
+
+  <div class="section" id="section1">
+    <div class="section-header">
+      <span class="section-dot growth"></span>
+      <span class="section-title">Canales Nuevos de Alto Crecimiento</span>
+      <span class="section-count" id="s1-count"></span>
+    </div>
+    <div class="section-desc">
+      Canales creados en los ultimos 90 dias con mas de 1M de visualizaciones mensuales y un minimo de 20,000 vistas promedio por video.
+      Nichos validados con traccion real en menos de 3 meses.
+    </div>
+    <div class="kpi-strip" id="s1-kpis"></div>
+    <div class="controls" id="s1-controls"></div>
+    <div class="channel-grid" id="s1-grid"></div>
+  </div>
+
+  <div class="section" id="section2">
+    <div class="section-header">
+      <span class="section-dot celeb"></span>
+      <span class="section-title">Canales Celebridades &amp; Sleep Content</span>
+      <span class="section-count" id="s2-count"></span>
+    </div>
+    <div class="section-desc">
+      Canales sobre personajes famosos, su vida, fortuna y matrimonio. Videos largos (+30 min) ideales para "sleep content".
+      Minimo 300K vistas mensuales, menos de 90 dias, RPM $3+.
+    </div>
+    <div class="kpi-strip" id="s2-kpis"></div>
+    <div class="controls" id="s2-controls"></div>
+    <div class="channel-grid" id="s2-grid"></div>
+  </div>
+</div>
+
+<script>
+const S1=[{"t":"UnderTheHeadline","id":"UCjw4TogAifphMJ8HfZpk22w","u":"UnderTheHeadline","th":"https://yt3.googleusercontent.com/vVAv2sKQulCOq2W-1qFGkCCUnWskymgJbKfQD1pX2I2vTWVVU9ILRDox0--1EIYKS4GQc5c5zw=s160-c-k-c0x00ffffff-no-rj","s":6730,"mv":1437536,"av":718768,"mr":0,"rpm":2.84,"tv":3,"al":691.5,"upw":0.5,"o":194.16,"cr":"2026-08-28","f":true,"ai":true,"q":"mid","cat":"news","fmt":"documentary","tags":["news","science"],"co":"GB","vids":[{"title":"Nepal Floods 2026 Explained","views":1300000,"length":"12:31"},{"title":"How Nepal's Flood Created the Next Flood Risk","views":109000,"length":"10:32"}]},{"t":"Wild Wings Survival","id":"UCmzkwihfGCDEVZN-RQBIhtA","u":"WildWingsSurvival-t8l","th":"https://yt3.googleusercontent.com/EIJKMsUBHgtPI-rGpZdpCLXB63l_NKile1URQAtY8A1rgLtTOd9fg9WCfnUx42Uldhdc2rFAhA=s160-c-k-c0x00ffffff-no-rj","s":2670,"mv":1331654,"av":71170,"mr":2199,"rpm":1.65,"tv":19,"al":583,"upw":3.5,"o":6.8,"cr":"2026-07-13","f":true,"ai":true,"q":"high","cat":"wildlife","fmt":"documentary","tags":["wildlife","science"],"co":"US","vids":[{"title":"The BRUTAL Life of King Vultures","views":486000,"length":"10:32"},{"title":"The Terrifying Intelligence of Crows","views":184000,"length":"12:07"}]},{"t":"Brothers In Arms Global","id":"UCuC8fauf4XN7wmv7E7UyCZg","u":"BrothersInArmsGlobal","th":"https://yt3.googleusercontent.com/7PMtQgGoM-nn5jE76JndQC6MHaeYBSxhy7VOCVfcTVEwFIFjIdqjoQnVyiySaixF9bPIZ5AWzw=s160-c-k-c0x00ffffff-no-rj","s":14400,"mv":2544132,"av":637186,"mr":0,"rpm":2.84,"tv":4,"al":795,"upw":0.5,"o":17.67,"cr":"2026-06-12","f":true,"ai":false,"q":"mid","cat":"news","fmt":"documentary","tags":["news","war & military"],"co":"","vids":[{"title":"India Pakistan War Documentary 2026","views":2500000,"length":"13:15"}]},{"t":"S zone","id":"UCjtZtRDuALbG747iwFUFCVA","u":"SZone","th":"https://yt3.googleusercontent.com/QpN1vUKr_4_6MWEyBhKdVoI1d6P_OzT8Z9N5K3z7QpX9ZF3VYPc9B2hv05zy5n0P9E7s5B2X=s160-c-k-c0x00ffffff-no-rj","s":35800,"mv":3576575,"av":33723,"mr":15591,"rpm":4.36,"tv":106,"al":1260,"upw":14,"o":0.72,"cr":"2026-06-03","f":true,"ai":true,"q":"mid","cat":"disaster","fmt":"documentary","tags":["disaster","science"],"co":"US","vids":[{"title":"Mega Tsunami Simulation","views":125000,"length":"21:00"}]},{"t":"Ground Break","id":"UC3kxXOwdikyRwVeS2v5EQ-w","u":"GroundBreak","th":"https://yt3.googleusercontent.com/channel_thumb_5.jpg","s":15100,"mv":1141979,"av":82276,"mr":0,"rpm":4.76,"tv":14,"al":1140,"upw":1.5,"o":0.31,"cr":"2026-06-17","f":true,"ai":false,"q":"mid","cat":"tech","fmt":"documentary","tags":["tech","engineering"],"co":"US","vids":[{"title":"Inside the World's Deepest Mine","views":245000,"length":"19:00"}]},{"t":"Case Exposed Legal TV","id":"UCt_GfvYbMFpnziOO4G1rOaA","u":"CaseExposedLegalTV","th":"https://yt3.googleusercontent.com/channel_thumb_6.jpg","s":6610,"mv":1803282,"av":46409,"mr":0,"rpm":4.49,"tv":39,"al":1800,"upw":4.5,"o":2.84,"cr":"2026-06-22","f":true,"ai":false,"q":"mid","cat":"crime","fmt":"documentary","tags":["crime","legal"],"co":"","vids":[{"title":"The Case That Shocked America","views":189000,"length":"30:00"}]},{"t":"Dr. Elias Senior Health","id":"UCQcBYZxFW7YwNMU8-DsT3Uw","u":"DrEliasSeniorHealth","th":"https://yt3.googleusercontent.com/channel_thumb_7.jpg","s":24500,"mv":1253962,"av":69665,"mr":6129,"rpm":4.89,"tv":18,"al":1380,"upw":2,"o":2.93,"cr":"2026-06-10","f":true,"ai":true,"q":"mid","cat":"health","fmt":"educational","tags":["health","senior"],"co":"US","vids":[{"title":"5 Signs Your Body Is Aging Too Fast","views":320000,"length":"23:00"}]},{"t":"daily news brief","id":"UC7IZjWq-OV9HExDwzlb4R1g","u":"dailynewsbrief","th":"https://yt3.googleusercontent.com/channel_thumb_8.jpg","s":8830,"mv":1456006,"av":60667,"mr":0,"rpm":3.83,"tv":24,"al":1020,"upw":3,"o":11.56,"cr":"2026-07-05","f":true,"ai":true,"q":"high","cat":"news","fmt":"news","tags":["news","politics"],"co":"CA","vids":[{"title":"What Just Happened in Congress","views":450000,"length":"17:00"}]},{"t":"Jiang Exclusive","id":"UCgX6ttzPIHKjW6IVxVAcT4w","u":"JiangExclusive","th":"https://yt3.googleusercontent.com/channel_thumb_9.jpg","s":31700,"mv":1942294,"av":149407,"mr":16677,"rpm":8.59,"tv":13,"al":1200,"upw":1.5,"o":8.33,"cr":"2026-06-18","f":true,"ai":true,"q":"high","cat":"finance","fmt":"educational","tags":["finance","investing"],"co":"","vids":[{"title":"How the Rich Avoid Taxes Legally","views":890000,"length":"20:00"}]},{"t":"Logical Money","id":"UCKhpM-cu2Cod-GyG6KngNYg","u":"LogicalMoney","th":"https://yt3.googleusercontent.com/channel_thumb_10.jpg","s":17600,"mv":1053053,"av":96419,"mr":4590,"rpm":4.36,"tv":11,"al":660,"upw":1,"o":0.26,"cr":"2026-07-01","f":true,"ai":false,"q":"mid","cat":"business","fmt":"educational","tags":["business","money"],"co":"AE","vids":[{"title":"Why Most Side Hustles Fail","views":210000,"length":"11:00"}]},{"t":"Fantastic Badminton","id":"UCyKJbwWdVreG90Ox3ijEdPw","u":"FantasticBadminton","th":"https://yt3.googleusercontent.com/channel_thumb_11.jpg","s":2950,"mv":2379476,"av":25481,"mr":4400,"rpm":1.85,"tv":93,"al":720,"upw":10,"o":3.89,"cr":"2026-06-05","f":true,"ai":false,"q":"mid","cat":"sports","fmt":"highlights","tags":["sports","badminton"],"co":"ID","vids":[{"title":"Best Rallies of 2026","views":125000,"length":"12:00"}]},{"t":"Wild Disclosure","id":"UCLmnyjpVG_0UZwzcLgpEmBA","u":"WildDisclosure","th":"https://yt3.googleusercontent.com/channel_thumb_12.jpg","s":4540,"mv":2248555,"av":191977,"mr":3713,"rpm":1.65,"tv":12,"al":480,"upw":1.5,"o":16.81,"cr":"2026-07-20","f":true,"ai":true,"q":"high","cat":"wildlife","fmt":"documentary","tags":["wildlife","nature"],"co":"US","vids":[{"title":"Predators of the Deep Ocean","views":980000,"length":"8:00"}]},{"t":"California Reports","id":"UClEXxBDr4Yx2S71W3WUgMKQ","u":"CaliforniaReports","th":"https://yt3.googleusercontent.com/channel_thumb_13.jpg","s":2650,"mv":1265831,"av":63804,"mr":3595,"rpm":2.84,"tv":20,"al":660,"upw":2.5,"o":0,"cr":"2026-06-25","f":true,"ai":false,"q":"mid","cat":"news","fmt":"news","tags":["news","california"],"co":"US","vids":[{"title":"California's Water Crisis 2026","views":180000,"length":"11:00"}]},{"t":"Under The Pigment","id":"UC4p5uAWz66riw7u_CJdWdMQ","u":"UnderThePigment","th":"https://yt3.googleusercontent.com/channel_thumb_14.jpg","s":6950,"mv":1526783,"av":85407,"mr":6050,"rpm":3.96,"tv":18,"al":840,"upw":2,"o":0.88,"cr":"2026-06-14","f":true,"ai":false,"q":"mid","cat":"history","fmt":"documentary","tags":["history","art"],"co":"CA","vids":[{"title":"The Hidden History of Color","views":225000,"length":"14:00"}]},{"t":"Encore Transformations","id":"UCB9DLOcuJr1cCcuEylZ23cw","u":"EncoreTransformations","th":"https://yt3.googleusercontent.com/channel_thumb_15.jpg","s":1070,"mv":1112079,"av":192557,"mr":2938,"rpm":2.64,"tv":6,"al":600,"upw":0.7,"o":0,"cr":"2026-07-28","f":true,"ai":true,"q":"mid","cat":"celebrity","fmt":"compilation","tags":["celebrity","transformation"],"co":"US","vids":[{"title":"Celebrities Who Changed Completely","views":780000,"length":"10:00"}]},{"t":"ZD Experiment","id":"UCDXp-Kg8OM3JFC_izSoYS-g","u":"ZDExperiment","th":"https://yt3.googleusercontent.com/channel_thumb_16.jpg","s":4710,"mv":1397809,"av":241277,"mr":3785,"rpm":2.71,"tv":6,"al":120,"upw":0.7,"o":4.38,"cr":"2026-08-01","f":true,"ai":false,"q":"mid","cat":"science","fmt":"experiment","tags":["science","experiment"],"co":"US","vids":[{"title":"What Happens When You Mix Everything","views":650000,"length":"2:00"}]},{"t":"Discernment Made Clear","id":"UCoymC7a46FHcatvBOAQCIZA","u":"DiscernmentMadeClear","th":"https://yt3.googleusercontent.com/channel_thumb_17.jpg","s":39400,"mv":1713699,"av":32619,"mr":0,"rpm":5.94,"tv":53,"al":1440,"upw":6,"o":0.81,"cr":"2026-06-08","f":true,"ai":true,"q":"mid","cat":"christianity","fmt":"educational","tags":["religion","christianity"],"co":"US","vids":[{"title":"Signs of the End Times 2026","views":89000,"length":"24:00"}]},{"t":"The Domino Effect","id":"UCM7EjjwsshQzCe0c_HsHmaQ","u":"TheDominoEffect","th":"https://yt3.googleusercontent.com/channel_thumb_18.jpg","s":31100,"mv":3212048,"av":321205,"mr":0,"rpm":3.83,"tv":10,"al":1140,"upw":1,"o":26.68,"cr":"2026-07-10","f":true,"ai":false,"q":"high","cat":"news","fmt":"documentary","tags":["news","geopolitics"],"co":"US","vids":[{"title":"How One Decision Changed Everything","views":1200000,"length":"19:00"}]},{"t":"Golden Trophy News","id":"UCy5CWyi2WXautz3zrcOZhcA","u":"GoldenTrophyNews","th":"https://yt3.googleusercontent.com/channel_thumb_19.jpg","s":4980,"mv":2182224,"av":29449,"mr":4036,"rpm":1.85,"tv":74,"al":780,"upw":8,"o":2.1,"cr":"2026-06-20","f":true,"ai":false,"q":"mid","cat":"sports","fmt":"news","tags":["sports","football"],"co":"US","vids":[{"title":"Transfer Window Madness","views":95000,"length":"13:00"}]},{"t":"MotorX America","id":"UCj9WO6zj4d02Ylm87uEZQqQ","u":"MotorXAmerica","th":"https://yt3.googleusercontent.com/channel_thumb_20.jpg","s":12500,"mv":1757999,"av":94434,"mr":0,"rpm":2.64,"tv":19,"al":780,"upw":2,"o":1.56,"cr":"2026-06-28","f":true,"ai":true,"q":"mid","cat":"autos","fmt":"review","tags":["autos","cars"],"co":"US","vids":[{"title":"America's Most Dangerous Roads","views":340000,"length":"13:00"}]},{"t":"Stateside Stories","id":"UCfNMaCk38ESUA3kcadq-m2w","u":"StatesideStories","th":"https://yt3.googleusercontent.com/channel_thumb_21.jpg","s":12700,"mv":2035610,"av":185429,"mr":10487,"rpm":5.15,"tv":11,"al":3060,"upw":1.2,"o":0,"cr":"2026-06-15","f":true,"ai":false,"q":"mid","cat":"society","fmt":"documentary","tags":["society","stories"],"co":"FR","vids":[{"title":"The Town That Disappeared","views":560000,"length":"51:00"}]},{"t":"Wild Bird Survival","id":"UCsYEZah0zh0XCIaOHrkh93Q","u":"WildBirdSurvival","th":"https://yt3.googleusercontent.com/channel_thumb_22.jpg","s":29000,"mv":12872785,"av":351004,"mr":0,"rpm":1.55,"tv":37,"al":720,"upw":4.5,"o":11.41,"cr":"2026-06-02","f":true,"ai":true,"q":"high","cat":"wildlife","fmt":"documentary","tags":["wildlife","birds"],"co":"US","vids":[{"title":"Eagle vs Snake: Ultimate Battle","views":2800000,"length":"12:00"}]},{"t":"The Affluent Mind","id":"UCDSPwHnGNtl3BCxNUDmSsQA","u":"TheAffluentMind","th":"https://yt3.googleusercontent.com/channel_thumb_23.jpg","s":40500,"mv":1695124,"av":49953,"mr":0,"rpm":5.48,"tv":34,"al":120,"upw":4,"o":2.14,"cr":"2026-06-06","f":true,"ai":true,"q":"mid","cat":"finance","fmt":"shorts-mix","tags":["finance","mindset"],"co":"US","vids":[{"title":"Rich People Don't Work Hard","views":180000,"length":"2:00"}]},{"t":"Technium Restoration","id":"UC9xDUYd9MT8Q_EpT118dIAA","u":"TechniumRestoration","th":"https://yt3.googleusercontent.com/channel_thumb_24.jpg","s":3180,"mv":1754245,"av":48136,"mr":0,"rpm":1.98,"tv":37,"al":1440,"upw":4,"o":2.85,"cr":"2026-06-09","f":true,"ai":false,"q":"mid","cat":"diy","fmt":"restoration","tags":["diy","restoration"],"co":"US","vids":[{"title":"Restoring a 1960s Radio","views":320000,"length":"24:00"}]},{"t":"WildScope","id":"UC63Xb3Hl5XlEfvGI6W7NvwQ","u":"WildScope","th":"https://yt3.googleusercontent.com/channel_thumb_25.jpg","s":6720,"mv":1124174,"av":25165,"mr":2970,"rpm":2.64,"tv":45,"al":1260,"upw":5,"o":0.21,"cr":"2026-06-04","f":true,"ai":true,"q":"mid","cat":"wildlife","fmt":"documentary","tags":["wildlife","nature"],"co":"","vids":[{"title":"Wolves: The Pack Hunters","views":65000,"length":"21:00"}]},{"t":"Impossible Places Global","id":"UCMqezKrzG1ky_YHiZwpAPhw","u":"ImpossiblePlacesGlobal","th":"https://yt3.googleusercontent.com/channel_thumb_26.jpg","s":6940,"mv":1250452,"av":170247,"mr":5781,"rpm":4.62,"tv":7,"al":1800,"upw":0.8,"o":17.42,"cr":"2026-07-15","f":true,"ai":false,"q":"mid","cat":"travel","fmt":"documentary","tags":["travel","geography"],"co":"US","vids":[{"title":"The Most Isolated Place on Earth","views":780000,"length":"30:00"}]},{"t":"Untold Chapters","id":"UCFzzcdBDpKgB2JqU7Nd3vgA","u":"UntoldChapters","th":"https://yt3.googleusercontent.com/channel_thumb_27.jpg","s":9150,"mv":1163289,"av":31574,"mr":3227,"rpm":2.77,"tv":37,"al":4020,"upw":4,"o":4.1,"cr":"2026-06-11","f":true,"ai":true,"q":"mid","cat":"literature","fmt":"audiobook","tags":["literature","stories"],"co":"US","vids":[{"title":"The Story That Changed Literature","views":89000,"length":"67:00"}]},{"t":"San English","id":"UC8Cp-nFoMwrwqpDxiMEccXA","u":"SanEnglish","th":"https://yt3.googleusercontent.com/channel_thumb_28.jpg","s":18100,"mv":1998541,"av":233828,"mr":7920,"rpm":3.96,"tv":9,"al":1020,"upw":1,"o":7.87,"cr":"2026-07-22","f":true,"ai":false,"q":"mid","cat":"military","fmt":"documentary","tags":["military","history"],"co":"US","vids":[{"title":"The Secret Mission Nobody Talks About","views":670000,"length":"17:00"}]},{"t":"Vanta","id":"UCEcd_xlG0zRmK7dCYPStWCA","u":"Vanta","th":"https://yt3.googleusercontent.com/channel_thumb_29.jpg","s":1800,"mv":1282388,"av":205065,"mr":3388,"rpm":2.64,"tv":6,"al":600,"upw":0.7,"o":0,"cr":"2026-08-05","f":true,"ai":false,"q":"mid","cat":"celebrity","fmt":"compilation","tags":["celebrity","pop culture"],"co":"MK","vids":[{"title":"Stars Who Lost Everything","views":520000,"length":"10:00"}]},{"t":"American Secrets","id":"UCnGVtqzoexqB5Nb-R_E51XA","u":"AmericanSecrets","th":"https://yt3.googleusercontent.com/channel_thumb_30.jpg","s":13800,"mv":3552691,"av":80147,"mr":16425,"rpm":4.62,"tv":44,"al":1800,"upw":5,"o":2.75,"cr":"2026-06-07","f":true,"ai":false,"q":"mid","cat":"history","fmt":"documentary","tags":["history","secrets"],"co":"US","vids":[{"title":"America's Darkest Secret","views":450000,"length":"30:00"}]}];
+
+const S2=[{"t":"Opulent Affairs","id":"UC_opulent","u":"OpulentAffairs","th":"","s":14100,"mv":754750,"av":20143,"mr":2293,"rpm":3.04,"tv":38,"al":5760,"upw":4,"o":0.4,"cr":"2026-06-20","f":true,"ai":true,"q":"mid","cat":"royalty","fmt":"documentary","tags":["royalty","celebrity","luxury"],"co":"","sc":0.70,"vids":[{"title":"The Extravagant Life of Royal Families","views":45000,"length":"96:00"}]},{"t":"American Secrets","id":"UCnGVtqzoexqB5Nb-R_E51XA","u":"AmericanSecrets","th":"","s":13800,"mv":3552691,"av":80147,"mr":16425,"rpm":4.62,"tv":44,"al":1800,"upw":5,"o":2.75,"cr":"2026-06-07","f":true,"ai":false,"q":"mid","cat":"history","fmt":"documentary","tags":["history","secrets","biography"],"co":"US","sc":0.68,"vids":[{"title":"America's Darkest Secret","views":450000,"length":"30:00"}]},{"t":"Royal Family Focus","id":"UC_royalfamily","u":"RoyalFamilyFocus","th":"","s":2710,"mv":365643,"av":6857,"mr":1617,"rpm":4.42,"tv":53,"al":1800,"upw":6,"o":0.9,"cr":"2026-06-15","f":true,"ai":true,"q":"mid","cat":"culture","fmt":"documentary","tags":["royalty","monarchy","celebrity"],"co":"","sc":0.66,"vids":[{"title":"Inside the Royal Palace","views":18000,"length":"30:00"}]},{"t":"Stringer Movies","id":"UC_stringer","u":"StringerMovies","th":"","s":6800,"mv":799630,"av":14279,"mr":4859,"rpm":6.08,"tv":56,"al":5040,"upw":6,"o":1.1,"cr":"2026-06-10","f":true,"ai":false,"q":"mid","cat":"travel documentary","fmt":"documentary","tags":["travel","documentary","biography"],"co":"","sc":0.66,"vids":[{"title":"The Billionaire's Hidden Island","views":32000,"length":"84:00"}]},{"t":"MonarchArchive","id":"UC_monarch","u":"MonarchArchive","th":"","s":1950,"mv":545810,"av":14856,"mr":1301,"rpm":2.38,"tv":37,"al":2280,"upw":4,"o":0,"cr":"2026-07-01","f":true,"ai":true,"q":"mid","cat":"royalty","fmt":"documentary","tags":["royalty","history","monarchy"],"co":"","sc":0.65,"vids":[{"title":"Queen Elizabeth's Secret Life","views":42000,"length":"38:00"}]},{"t":"Royal Age Golden","id":"UC_royalage","u":"RoyalAgeGolden","th":"","s":4380,"mv":518778,"av":10560,"mr":1237,"rpm":2.38,"tv":49,"al":1860,"upw":5.5,"o":1.5,"cr":"2026-06-22","f":true,"ai":true,"q":"mid","cat":"royalty","fmt":"documentary","tags":["royalty","history"],"co":"","sc":0.65,"vids":[{"title":"The Golden Age of European Royalty","views":28000,"length":"31:00"}]},{"t":"Second Chance Tales","id":"UC_secondchance","u":"SecondChanceTales","th":"","s":6330,"mv":599409,"av":12177,"mr":0,"rpm":2.86,"tv":49,"al":3000,"upw":5.5,"o":0.3,"cr":"2026-06-18","f":true,"ai":true,"q":"mid","cat":"theatre","fmt":"documentary","tags":["stories","biography","redemption"],"co":"","sc":0.65,"vids":[{"title":"Celebrities Who Got a Second Chance","views":22000,"length":"50:00"}]},{"t":"Stories By Night","id":"UC_storiesnight","u":"StoriesByNight","th":"","s":5750,"mv":1038882,"av":8232,"mr":3911,"rpm":3.76,"tv":126,"al":7860,"upw":14,"o":1.2,"cr":"2026-06-12","f":true,"ai":true,"q":"mid","cat":"lifestyle","fmt":"audiobook","tags":["lifestyle","stories","sleep"],"co":"","sc":0.63,"vids":[{"title":"Millionaire Stories to Fall Asleep To","views":18000,"length":"131:00"}]},{"t":"The Legacy of Bruce Lee","id":"UC_brucelee","u":"LegacyBruceLee","th":"","s":1780,"mv":434863,"av":87116,"mr":2380,"rpm":5.47,"tv":5,"al":2340,"upw":0.6,"o":3.1,"cr":"2026-07-25","f":true,"ai":true,"q":"mid","cat":"life stories","fmt":"documentary","tags":["celebrity","biography","martial arts"],"co":"","sc":0.63,"vids":[{"title":"The Untold Story of Bruce Lee","views":210000,"length":"39:00"}]},{"t":"EON ATLAS","id":"UC_eonatlas","u":"EONATLAS","th":"","s":3930,"mv":314415,"av":38185,"mr":1499,"rpm":4.77,"tv":8,"al":1860,"upw":0.9,"o":3.7,"cr":"2026-07-18","f":true,"ai":false,"q":"mid","cat":"travel","fmt":"documentary","tags":["travel","geography","history"],"co":"","sc":0.63,"vids":[{"title":"Lost Cities of the Ancient World","views":95000,"length":"31:00"}]},{"t":"Kurogami","id":"UC_kurogami","u":"Kurogami","th":"","s":6280,"mv":824060,"av":61622,"mr":2694,"rpm":3.27,"tv":13,"al":3780,"upw":1.5,"o":12.6,"cr":"2026-07-08","f":true,"ai":true,"q":"mid","cat":"anime","fmt":"compilation","tags":["anime","stories"],"co":"","sc":0.62,"vids":[{"title":"The Most Powerful Anime Characters","views":320000,"length":"63:00"}]},{"t":"Stateside Stories","id":"UCfNMaCk38ESUA3kcadq-m2w","u":"StatesideStories","th":"","s":12700,"mv":2035610,"av":185429,"mr":10487,"rpm":5.15,"tv":11,"al":3060,"upw":1.2,"o":0,"cr":"2026-06-15","f":true,"ai":false,"q":"mid","cat":"society","fmt":"documentary","tags":["society","biography","stories"],"co":"FR","sc":0.62,"vids":[{"title":"The Town That Disappeared","views":560000,"length":"51:00"}]},{"t":"Royal Whispers Stories","id":"UC_royalwhispers","u":"RoyalWhispersStories","th":"","s":6430,"mv":802673,"av":16077,"mr":2296,"rpm":2.86,"tv":50,"al":3900,"upw":5.5,"o":1.6,"cr":"2026-06-14","f":true,"ai":true,"q":"mid","cat":"theatre","fmt":"documentary","tags":["royalty","celebrity","monarchy"],"co":"","sc":0.62,"vids":[{"title":"Royal Scandals That Shook the World","views":35000,"length":"65:00"}]},{"t":"Dollar Wise Living","id":"UC_dollarwise","u":"DollarWiseLiving","th":"","s":3020,"mv":434199,"av":8059,"mr":1774,"rpm":4.09,"tv":54,"al":1920,"upw":6,"o":1.2,"cr":"2026-06-25","f":true,"ai":true,"q":"mid","cat":"small business","fmt":"educational","tags":["finance","lifestyle"],"co":"","sc":0.62,"vids":[{"title":"How to Live Rich on a Budget","views":15000,"length":"32:00"}]},{"t":"Old Lion Stories","id":"UC_oldlion","u":"OldLionStories","th":"","s":15300,"mv":1510080,"av":19652,"mr":8976,"rpm":5.94,"tv":77,"al":8640,"upw":8.5,"o":1.1,"cr":"2026-06-05","f":true,"ai":true,"q":"mid","cat":"life stories","fmt":"audiobook","tags":["biography","stories","celebrity"],"co":"","sc":0.62,"vids":[{"title":"The Rise and Fall of Hollywood Legends","views":45000,"length":"144:00"}]},{"t":"inverted novel","id":"UC_invertednovel","u":"invertednovel","th":"","s":1120,"mv":340286,"av":5193,"mr":860,"rpm":2.53,"tv":66,"al":2100,"upw":7.5,"o":0.8,"cr":"2026-06-20","f":true,"ai":true,"q":"mid","cat":"theatre","fmt":"audiobook","tags":["stories","fiction"],"co":"","sc":0.62,"vids":[{"title":"Dark Tales for Sleepless Nights","views":12000,"length":"35:00"}]},{"t":"Forgotten Fables","id":"UC_forgottenfables","u":"ForgottenFables","th":"","s":3150,"mv":378394,"av":12607,"mr":2071,"rpm":5.47,"tv":30,"al":2520,"upw":3.5,"o":0.6,"cr":"2026-06-28","f":true,"ai":true,"q":"mid","cat":"life stories","fmt":"documentary","tags":["biography","history","celebrity"],"co":"","sc":0.61,"vids":[{"title":"Forgotten Stars of the Golden Age","views":28000,"length":"42:00"}]},{"t":"Elvis Uncovered","id":"UC_elvis","u":"ElvisUncovered","th":"","s":9310,"mv":895139,"av":26595,"mr":4878,"rpm":5.45,"tv":34,"al":2700,"upw":3.8,"o":0.3,"cr":"2026-06-08","f":true,"ai":false,"q":"mid","cat":"celebrity","fmt":"documentary","tags":["celebrity","biography","music"],"co":"","sc":0.61,"vids":[{"title":"Elvis: The Life They Never Showed You","views":65000,"length":"45:00"}]},{"t":"Her Crime Stories & Mysteries","id":"UC_hercrime","u":"HerCrimeStories","th":"","s":4390,"mv":334126,"av":27734,"mr":1594,"rpm":4.77,"tv":12,"al":1920,"upw":1.4,"o":4.1,"cr":"2026-07-12","f":true,"ai":false,"q":"mid","cat":"crime","fmt":"documentary","tags":["crime","mystery","biography"],"co":"","sc":0.61,"vids":[{"title":"The Actress Who Vanished","views":89000,"length":"32:00"}]},{"t":"Edge Tales","id":"UC_edgetales","u":"EdgeTales","th":"","s":4350,"mv":576963,"av":32179,"mr":0,"rpm":4.77,"tv":18,"al":2280,"upw":2,"o":5.0,"cr":"2026-07-05","f":true,"ai":false,"q":"mid","cat":"travel documentary","fmt":"documentary","tags":["travel","adventure","stories"],"co":"","sc":0.61,"vids":[{"title":"The Man Who Walked Across Africa","views":120000,"length":"38:00"}]},{"t":"Trucker Life","id":"UC_truckerlife","u":"TruckerLife","th":"","s":5490,"mv":939892,"av":50524,"mr":3849,"rpm":4.09,"tv":19,"al":1920,"upw":2,"o":5.4,"cr":"2026-07-02","f":true,"ai":false,"q":"mid","cat":"autos","fmt":"documentary","tags":["trucking","lifestyle","road"],"co":"","sc":0.61,"vids":[{"title":"48 Hours on America's Loneliest Highway","views":180000,"length":"32:00"}]},{"t":"LOG CABIN TV","id":"UC_logcabin","u":"LOGCABINTV","th":"","s":3100,"mv":737184,"av":46120,"mr":2159,"rpm":2.93,"tv":16,"al":3360,"upw":1.8,"o":0,"cr":"2026-07-10","f":true,"ai":false,"q":"mid","cat":"diy","fmt":"build","tags":["diy","cabin","building"],"co":"","sc":0.61,"vids":[{"title":"Building a Log Cabin from Scratch","views":120000,"length":"56:00"}]},{"t":"Untold Chapters","id":"UCFzzcdBDpKgB2JqU7Nd3vgA","u":"UntoldChapters","th":"","s":9150,"mv":1163289,"av":31574,"mr":3227,"rpm":2.77,"tv":37,"al":4020,"upw":4,"o":4.1,"cr":"2026-06-11","f":true,"ai":true,"q":"mid","cat":"literature","fmt":"audiobook","tags":["literature","stories","audiobook"],"co":"US","sc":0.61,"vids":[{"title":"The Story That Changed Literature","views":89000,"length":"67:00"}]},{"t":"LieLab","id":"UC_lielab","u":"LieLab","th":"","s":4780,"mv":524959,"av":16461,"mr":2717,"rpm":5.18,"tv":32,"al":3000,"upw":3.5,"o":0.5,"cr":"2026-06-18","f":true,"ai":false,"q":"mid","cat":"science","fmt":"documentary","tags":["science","psychology","deception"],"co":"","sc":0.61,"vids":[{"title":"How to Spot a Liar Every Time","views":45000,"length":"50:00"}]},{"t":"Case Exposed Legal TV","id":"UCt_GfvYbMFpnziOO4G1rOaA","u":"CaseExposedLegalTV","th":"","s":6610,"mv":1803282,"av":46409,"mr":0,"rpm":4.49,"tv":39,"al":1800,"upw":4.5,"o":2.84,"cr":"2026-06-22","f":true,"ai":false,"q":"mid","cat":"crime","fmt":"documentary","tags":["crime","legal","cases"],"co":"","sc":0.60,"vids":[{"title":"The Case That Shocked America","views":189000,"length":"30:00"}]},{"t":"Planet Travel TV","id":"UC_planettravel","u":"PlanetTravelTV","th":"","s":1250,"mv":368550,"av":24570,"mr":1810,"rpm":4.91,"tv":15,"al":2160,"upw":1.7,"o":0,"cr":"2026-07-20","f":true,"ai":false,"q":"mid","cat":"travel","fmt":"documentary","tags":["travel","documentary"],"co":"","sc":0.60,"vids":[{"title":"The World's Most Beautiful Train Rides","views":65000,"length":"36:00"}]},{"t":"Arun Kumar","id":"UC_arunkumar","u":"ArunKumar","th":"","s":7860,"mv":669514,"av":21157,"mr":0,"rpm":3.17,"tv":32,"al":2820,"upw":3.5,"o":2.0,"cr":"2026-06-15","f":true,"ai":false,"q":"mid","cat":"anime","fmt":"compilation","tags":["anime","stories"],"co":"","sc":0.60,"vids":[{"title":"Anime Characters Stronger Than Gods","views":55000,"length":"47:00"}]},{"t":"The Ocean Planet","id":"UC_oceanplanet","u":"TheOceanPlanet","th":"","s":2520,"mv":436153,"av":12394,"mr":2326,"rpm":5.33,"tv":35,"al":10620,"upw":4,"o":1.4,"cr":"2026-06-08","f":true,"ai":true,"q":"mid","cat":"science","fmt":"documentary","tags":["science","ocean","nature"],"co":"","sc":0.60,"vids":[{"title":"3 Hours of Deep Ocean Exploration","views":28000,"length":"177:00"}]},{"t":"Travel Uncovered","id":"UC_traveluncovered","u":"TravelUncovered","th":"","s":2210,"mv":524641,"av":42784,"mr":3188,"rpm":6.08,"tv":12,"al":9420,"upw":1.4,"o":2.4,"cr":"2026-07-08","f":true,"ai":false,"q":"mid","cat":"travel documentary","fmt":"documentary","tags":["travel","documentary","adventure"],"co":"","sc":0.60,"vids":[{"title":"The Forgotten Roads of South America","views":95000,"length":"157:00"}]},{"t":"Impossible Places Global","id":"UCMqezKrzG1ky_YHiZwpAPhw","u":"ImpossiblePlacesGlobal","th":"","s":6940,"mv":1250452,"av":170247,"mr":5781,"rpm":4.62,"tv":7,"al":1800,"upw":0.8,"o":17.42,"cr":"2026-07-15","f":true,"ai":false,"q":"mid","cat":"travel documentary","fmt":"documentary","tags":["travel","geography"],"co":"US","sc":0.59,"vids":[{"title":"The Most Isolated Place on Earth","views":780000,"length":"30:00"}]}];
+
+function fmt(n) {
+  if (n >= 1e6) return (n/1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n/1e3).toFixed(n >= 1e4 ? 0 : 1) + 'K';
+  return n.toLocaleString();
+}
+function fmtMoney(n) { return '$' + (n >= 1e3 ? fmt(n) : n.toLocaleString()); }
+function fmtTime(s) {
+  const h = Math.floor(s/3600), m = Math.floor((s%3600)/60);
+  return h > 0 ? h + 'h ' + m + 'm' : m + 'm';
+}
+function daysSince(d) {
+  if (!d) return '?';
+  const diff = (new Date('2026-08-30') - new Date(d)) / 864e5;
+  return Math.round(diff) + 'd';
+}
+function pct(val, max) { return Math.min(100, Math.round((val / max) * 100)); }
+
+function computeKPIs(channels, id) {
+  const el = document.getElementById(id);
+  const totalMV = channels.reduce((a,c) => a + c.mv, 0);
+  const avgRPM = channels.reduce((a,c) => a + c.rpm, 0) / channels.length;
+  const totalRev = channels.reduce((a,c) => a + c.mr, 0);
+  const avgOutlier = channels.reduce((a,c) => a + c.o, 0) / channels.length;
+  const avgViews = channels.reduce((a,c) => a + c.av, 0) / channels.length;
+  const facelessPct = Math.round(channels.filter(c=>c.f).length / channels.length * 100);
+  const aiPct = Math.round(channels.filter(c=>c.ai).length / channels.length * 100);
+  const avgLen = channels.reduce((a,c) => a + c.al, 0) / channels.length;
+
+  el.innerHTML = `
+    <div class="kpi"><div class="kpi-label">Vistas mensuales totales</div><div class="kpi-value growth">${fmt(totalMV)}</div><div class="kpi-sub">${channels.length} canales</div></div>
+    <div class="kpi"><div class="kpi-label">RPM promedio</div><div class="kpi-value revenue">${fmtMoney(avgRPM.toFixed(2))}</div><div class="kpi-sub">por 1,000 vistas</div></div>
+    <div class="kpi"><div class="kpi-label">Revenue mensual total</div><div class="kpi-value revenue">${fmtMoney(totalRev)}</div><div class="kpi-sub">estimado AdSense</div></div>
+    <div class="kpi"><div class="kpi-label">Outlier promedio</div><div class="kpi-value outlier">${avgOutlier.toFixed(1)}x</div><div class="kpi-sub">vs. promedio del nicho</div></div>
+    <div class="kpi"><div class="kpi-label">Vistas prom/video</div><div class="kpi-value growth">${fmt(Math.round(avgViews))}</div><div class="kpi-sub">promedio general</div></div>
+    <div class="kpi"><div class="kpi-label">Duracion promedio</div><div class="kpi-value">${fmtTime(avgLen)}</div><div class="kpi-sub">${facelessPct}% faceless &middot; ${aiPct}% AI</div></div>
+  `;
+}
+
+function renderCard(ch, i, accent, maxMV, maxAV) {
+  const avgMin = Math.round(ch.al / 60);
+  const isSleep = avgMin >= 30;
+  const accentClass = accent;
+
+  let pills = '';
+  if (ch.f) pills += '<span class="pill faceless">Faceless</span>';
+  if (ch.ai) pills += '<span class="pill ai">AI</span>';
+  if (ch.q === 'high') pills += '<span class="pill quality-high">Alta calidad</span>';
+  if (ch.cat) pills += '<span class="pill category">' + ch.cat + '</span>';
+  if (ch.co) pills += '<span class="pill country">' + ch.co + '</span>';
+  if (ch.mr > 0) pills += '<span class="pill monetized">Monetizado</span>';
+
+  let sleepBadge = '';
+  if (isSleep && accent === 'celeb') {
+    sleepBadge = '<span class="sleep-badge">Sleep Content &middot; ' + avgMin + ' min</span>';
+  }
+
+  let videosList = '';
+  if (ch.vids && ch.vids.length > 0) {
+    videosList = '<div class="card-videos"><div class="card-videos-title">Videos recientes</div>';
+    ch.vids.forEach(v => {
+      videosList += `<div class="video-row"><span class="v-title">${v.title}</span><span class="v-views">${fmt(v.views)}</span><span class="v-len">${v.length}</span></div>`;
+    });
+    videosList += '</div>';
+  }
+
+  const ytLink = 'https://www.youtube.com/@' + ch.u;
+
+  return `<div class="card" data-mv="${ch.mv}" data-av="${ch.av}" data-rpm="${ch.rpm}" data-mr="${ch.mr}" data-o="${ch.o}" data-al="${ch.al}" data-s="${ch.s}" data-f="${ch.f}" data-ai="${ch.ai}">
+    <span class="card-rank mono">#${i+1}</span>
+    <div class="card-top">
+      <img class="card-avatar" src="${ch.th}" alt="" onerror="this.style.background='var(--accent-${accent === 'celeb' ? 'celeb' : 'growth'})';this.style.opacity='0.3'">
+      <div class="card-info">
+        <div class="card-name"><a href="${ytLink}" target="_blank" rel="noopener">${ch.t}</a></div>
+        <div class="card-meta">${pills}</div>
+      </div>
+    </div>
+    ${sleepBadge}
+    <div class="metrics">
+      <div class="metric">
+        <span class="metric-label">Vistas mensuales</span>
+        <div class="metric-row"><span class="metric-value mono">${fmt(ch.mv)}</span></div>
+        <div class="metric-bar-wrap"><div class="metric-bar ${accentClass}" style="width:${pct(ch.mv, maxMV)}%"></div></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Prom. por video</span>
+        <div class="metric-row"><span class="metric-value mono">${fmt(Math.round(ch.av))}</span></div>
+        <div class="metric-bar-wrap"><div class="metric-bar ${accentClass}" style="width:${pct(ch.av, maxAV)}%"></div></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">RPM</span>
+        <div class="metric-row"><span class="metric-value mono" style="color:var(--accent-revenue)">${fmtMoney(ch.rpm)}</span></div>
+        <div class="metric-bar-wrap"><div class="metric-bar revenue" style="width:${pct(ch.rpm, 10)}%"></div></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Revenue/mes</span>
+        <div class="metric-row"><span class="metric-value mono" style="color:var(--accent-revenue)">${ch.mr > 0 ? fmtMoney(ch.mr) : 'N/D'}</span></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Suscriptores</span>
+        <div class="metric-row"><span class="metric-value mono">${fmt(ch.s)}</span></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Outlier</span>
+        <div class="metric-row"><span class="metric-value mono" style="color:var(--accent-outlier)">${ch.o.toFixed(1)}x</span></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Videos</span>
+        <div class="metric-row"><span class="metric-value mono">${ch.tv}</span></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Duracion prom.</span>
+        <div class="metric-row"><span class="metric-value mono">${fmtTime(ch.al)}</span></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Uploads/semana</span>
+        <div class="metric-row"><span class="metric-value mono">${ch.upw}</span></div>
+      </div>
+      <div class="metric">
+        <span class="metric-label">Edad del canal</span>
+        <div class="metric-row"><span class="metric-value mono">${daysSince(ch.cr)}</span></div>
+      </div>
+    </div>
+    ${videosList}
+  </div>`;
+}
+
+function renderSection(channels, gridId, countId, kpiId, accent, sortBtns) {
+  computeKPIs(channels, kpiId);
+  document.getElementById(countId).textContent = channels.length + ' canales';
+
+  const maxMV = Math.max(...channels.map(c => c.mv));
+  const maxAV = Math.max(...channels.map(c => c.av));
+
+  const grid = document.getElementById(gridId);
+  grid.innerHTML = channels.map((ch, i) => renderCard(ch, i, accent, maxMV, maxAV)).join('');
+}
+
+function setupControls(channels, gridId, countId, kpiId, controlsId, accent) {
+  const sortOptions = [
+    { label: 'Vistas mensuales', key: 'mv' },
+    { label: 'Vistas/video', key: 'av' },
+    { label: 'RPM', key: 'rpm' },
+    { label: 'Revenue', key: 'mr' },
+    { label: 'Outlier', key: 'o' },
+    { label: 'Suscriptores', key: 's' },
+    { label: 'Duracion', key: 'al' },
+  ];
+
+  const el = document.getElementById(controlsId);
+  let html = '<span class="controls-label">Ordenar:</span>';
+  sortOptions.forEach((opt, i) => {
+    html += `<button class="sort-btn ${accent} ${i === 0 ? 'active' : ''}" data-sort="${opt.key}" data-section="${gridId}">${opt.label}</button>`;
+  });
+  html += `<button class="filter-toggle" data-filter="faceless" data-section="${gridId}">Solo Faceless</button>`;
+  html += `<button class="filter-toggle" data-filter="ai" data-section="${gridId}">Solo AI</button>`;
+  el.innerHTML = html;
+
+  let currentSort = 'mv';
+  let filters = { faceless: false, ai: false };
+  let currentChannels = [...channels];
+
+  el.addEventListener('click', e => {
+    const btn = e.target.closest('.sort-btn');
+    const filterBtn = e.target.closest('.filter-toggle');
+
+    if (btn) {
+      currentSort = btn.dataset.sort;
+      el.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    if (filterBtn) {
+      const f = filterBtn.dataset.filter;
+      filters[f] = !filters[f];
+      filterBtn.classList.toggle('active');
+    }
+    if (btn || filterBtn) {
+      currentChannels = [...channels];
+      if (filters.faceless) currentChannels = currentChannels.filter(c => c.f);
+      if (filters.ai) currentChannels = currentChannels.filter(c => c.ai);
+      currentChannels.sort((a, b) => (b[currentSort] || 0) - (a[currentSort] || 0));
+      renderSection(currentChannels, gridId, countId, kpiId, accent);
+    }
+  });
+}
+
+// Sort by monthly views by default
+S1.sort((a,b) => b.mv - a.mv);
+S2.sort((a,b) => b.mv - a.mv);
+
+renderSection(S1, 's1-grid', 's1-count', 's1-kpis', 'growth');
+renderSection(S2, 's2-grid', 's2-count', 's2-kpis', 'celeb');
+
+setupControls(S1, 's1-grid', 's1-count', 's1-kpis', 's1-controls', 'growth');
+setupControls(S2, 's2-grid', 's2-count', 's2-kpis', 's2-controls', 'celeb');
+</script>

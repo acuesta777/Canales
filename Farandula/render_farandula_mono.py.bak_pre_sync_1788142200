@@ -1,0 +1,343 @@
+#!/usr/bin/env python3
+"""
+render_farandula_mono.py — Render Farandula Formato 2 (mono-artista).
+
+Lee mono_state.json (generado por dashboard_farandula_mono.py) y construye
+UN SOLO stream continuo donde:
+  - slots tipo "imagen" → hook_NNNN_zp.mp4 en su segundo exacto del timeline
+  - slots tipo "clip"   → clip de clips_ref/ con anti-fingerprint
+
+NO hay hook separado. Todo es un stream narrativo continuo.
+
+Uso:
+  python3 render_farandula_mono.py "Farandula/LUCHA VILLA/"
+  python3 render_farandula_mono.py "Farandula/LUCHA VILLA/" --forzar  # ignorar estado aprobado
+"""
+
+import sys, json, random, subprocess, pathlib, tempfile, shutil, math, argparse
+
+FFMPEG  = "/opt/homebrew/bin/ffmpeg"
+FFPROBE = "/opt/homebrew/bin/ffprobe"
+
+ZOOM        = 1.04
+FLIP_CHANCE = 0.50
+VHS         = False  # filtro retro: ruido+curvas+viñeta. Cambiar a False para desactivar
+VHS_FILTER  = (
+    "noise=alls=20:allf=t+u,"                                          # grano temporal (cambia c/frame)
+    "curves=r='0/0.05 1/0.90':g='0/0.03 1/0.88':b='0/0.0 1/0.75',"   # color lavado/amarillento
+    "hue=s=0.72,"                                                       # desaturar
+    # "vignette=PI/3"                                                  # viñeta — desactivada hasta nuevo aviso
+)
+MUSIC_VOL   = 0.07
+CLIP_MAX    = 5.0   # trim máx por clip antes de anti-fp
+
+VERDE    = "\033[92m"
+ROJO     = "\033[91m"
+AMARILLO = "\033[93m"
+RESET    = "\033[0m"
+
+def ok(msg):   print(f"  {VERDE}✓{RESET}  {msg}", flush=True)
+def err(msg):  print(f"  {ROJO}✗{RESET}  {msg}", flush=True)
+def warn(msg): print(f"  {AMARILLO}⚠{RESET}  {msg}", flush=True)
+
+
+# ── Utilidades ─────────────────────────────────────────────────────────────────
+
+def get_duration(path):
+    r = subprocess.run(
+        [FFPROBE, "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=nokey=1:noprint_wrappers=1", str(path)],
+        capture_output=True, text=True, timeout=15
+    )
+    try:
+        return float(r.stdout.strip())
+    except Exception:
+        return 0.0
+
+
+def normalize_clip(src, dst, flip=None):
+    """Anti-fingerprint para clips de video real. Usa la duración natural del clip — NUNCA loopear."""
+    if flip is None:
+        flip = random.random() < FLIP_CHANCE
+    speed  = random.uniform(0.98, 1.02)
+    pts    = f"setpts={1/speed:.4f}*PTS"
+    crop_f = f"scale=iw*{ZOOM}:ih*{ZOOM},crop=iw/{ZOOM}:ih/{ZOOM},scale=1920:1080"
+    filters = [crop_f, "fps=30", pts]
+    if flip:
+        filters.append("hflip")
+    if VHS:
+        filters.append(VHS_FILTER)
+    cmd = [
+        FFMPEG, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+        "-i", str(src),
+        "-vf", ",".join(filters),
+        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "23",
+        "-pix_fmt", "yuv420p", "-an", str(dst)
+    ]
+    subprocess.run(cmd, capture_output=True, timeout=300)
+    return dst.exists() and dst.stat().st_size > 5000
+
+
+def normalize_imagen(src, dst, dur):
+    """Normaliza clip zoompan de imagen Flow a 1920x1080 30fps."""
+    cmd = [
+        FFMPEG, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+        "-i", str(src), "-t", str(dur),
+        "-vf", "scale=1920:1080:force_original_aspect_ratio=decrease,"
+               "pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30",
+        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "23",
+        "-pix_fmt", "yuv420p", "-an", str(dst)
+    ]
+    subprocess.run(cmd, capture_output=True, timeout=300)
+    return dst.exists() and dst.stat().st_size > 5000
+
+
+# ── Construcción del timeline desde mono_state.json ───────────────────────────
+
+def construir_timeline(folder, tmp_dir, total_dur, forzar=False):
+    """
+    Construye el timeline cronológico:
+    - Lee hook_timeline.json para las 8 posiciones exactas de imágenes Flow
+    - Llena todo lo demás con clips de clips_ref/ (duración natural, SIN loopear)
+    - Cicla el pool de clips si hace falta para cubrir total_dur
+    """
+    hook_dir  = folder / "hook_images"
+    tl_file   = folder / "hook_timeline.json"
+    clips_dir = folder / "clips_ref"
+
+    # Cargar posiciones de imágenes Flow desde hook_timeline.json
+    flow_items = []
+    if tl_file.exists():
+        data = json.loads(tl_file.read_text())
+        for seg in data.get("visual_timeline", []):
+            img_name = f"hook_{seg['segment_id']:04d}.jpg"
+            zp_name  = f"hook_{seg['segment_id']:04d}_zp.mp4"
+            flow_items.append({
+                "start":    seg["start_seconds"],
+                "end":      seg["end_seconds"],
+                "dur":      seg["duration"],
+                "img_name": img_name,
+                "zp_name":  zp_name,
+            })
+
+    ok(f"Imágenes Flow: {len(flow_items)} posiciones del hook_timeline.json")
+
+    # Pool de clips_ref — respetar el orden del dashboard (mono_state.json)
+    state_file = folder / "mono_state.json"
+    all_clips = []
+    if state_file.exists():
+        state = json.loads(state_file.read_text())
+        clip_items = [
+            it for it in state
+            if it.get("tipo") == "clip" and it.get("estado") != "rechazado"
+               and it.get("filename")
+        ]
+        # NO ordenar por idx — respetar el orden del array (drag del dashboard)
+        for it in clip_items:
+            p = clips_dir / it["filename"]
+            if p.exists():
+                all_clips.append(p)
+    if not all_clips and clips_dir.exists():
+        # Fallback: orden alfabético si no hay state
+        all_clips = sorted(clips_dir.glob("clip_*.mp4"))
+    ok(f"Pool clips_ref: {len(all_clips)} clips (orden del dashboard)")
+
+    proc_dir = tmp_dir / "planos"
+    proc_dir.mkdir(exist_ok=True)
+
+    planos      = []
+    total_built = 0.0
+    plano_idx   = 0
+    clip_cursor = 0
+
+    # Convertir flow_items a set de rangos ocupados
+    flow_ranges = [(fi["start"], fi["end"]) for fi in flow_items]
+
+    def en_rango_flow(t):
+        for s, e in flow_ranges:
+            if s <= t < e:
+                return True
+        return False
+
+    # Siguiente flow item a insertar
+    flow_queue = list(flow_items)
+
+    def procesar_imagen(fi, idx):
+        out     = proc_dir / f"plano_{idx:04d}.mp4"
+        zp_path = hook_dir / fi["zp_name"]
+        if zp_path.exists():
+            if normalize_imagen(zp_path, out, fi["dur"]):
+                return out, fi["dur"]
+        # Fallback zoompan inline
+        jpg_path = hook_dir / fi["img_name"]
+        if jpg_path.exists():
+            warn(f"  Sin _zp.mp4 — zoompan inline para {fi['img_name']}")
+            sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
+            from zoompan_clip import make_zoompan
+            make_zoompan(jpg_path, out, dur=fi["dur"], index=idx)
+            if out.exists():
+                return out, fi["dur"]
+        warn(f"  Imagen Flow no encontrada: {fi['zp_name']} — negro")
+        _negro(out, fi["dur"])
+        return out, fi["dur"]
+
+    def procesar_clip(idx, flip):
+        nonlocal clip_cursor
+        out = proc_dir / f"plano_{idx:04d}.mp4"
+        clip_path = all_clips[clip_cursor % len(all_clips)]
+        clip_cursor += 1
+        if normalize_clip(clip_path, out, flip=flip):
+            dur = get_duration(out)
+            return out, dur if dur > 0.3 else 0
+        return None, 0
+
+    print(f"  Construyendo {total_dur:.0f}s de video...", flush=True)
+
+    while total_built < total_dur + 2:
+        # ¿Toca insertar una imagen Flow?
+        if flow_queue and total_built >= flow_queue[0]["start"] - 0.5:
+            fi = flow_queue.pop(0)
+            out, dur = procesar_imagen(fi, plano_idx)
+            if out.exists():
+                planos.append(out)
+                total_built += dur
+            plano_idx += 1
+            continue
+
+        # Clip normal
+        if not all_clips:
+            break
+        out, dur = procesar_clip(plano_idx, flip=(plano_idx % 2 == 1))
+        if out and out.exists() and dur > 0.3:
+            planos.append(out)
+            total_built += dur
+        plano_idx += 1
+
+        if plano_idx % 20 == 0:
+            pct = min(total_built / total_dur * 100, 99)
+            print(f"    [{plano_idx}] {pct:.0f}% — {total_built:.0f}s / {total_dur:.0f}s", flush=True)
+
+        if plano_idx > 2000:
+            warn("Límite de iteraciones")
+            break
+
+    ok(f"Timeline completo: {len(planos)} planos, {total_built:.1f}s")
+    return planos
+
+
+def _negro(dst, dur):
+    subprocess.run([
+        FFMPEG, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+        "-f", "lavfi", "-i", f"color=c=black:size=1920x1080:rate=25:duration={dur}",
+        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "23",
+        "-pix_fmt", "yuv420p", str(dst)
+    ], capture_output=True, timeout=30)
+
+
+# ── Concat + Mux ──────────────────────────────────────────────────────────────
+
+def concat_planos(planos, out_path, tmp_dir, total_dur):
+    concat_list = tmp_dir / "concat_timeline.txt"
+    concat_list.write_text(
+        "\n".join(f"file '{p.resolve()}'" for p in planos), encoding="utf-8"
+    )
+    raw = tmp_dir / "video_raw.mp4"
+    subprocess.run([
+        FFMPEG, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+        "-f", "concat", "-safe", "0", "-i", str(concat_list),
+        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "23",
+        "-pix_fmt", "yuv420p", "-an", str(raw)
+    ], capture_output=True, timeout=3600)
+    if not raw.exists():
+        return None
+    # Trim exacto
+    subprocess.run([
+        FFMPEG, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+        "-i", str(raw), "-t", str(total_dur), "-c:v", "copy", str(out_path)
+    ], capture_output=True, timeout=120)
+    return out_path if out_path.exists() else None
+
+
+def mux_final(video_path, mp3_file, out_file, folder):
+    # Formato 2 mono: SIN música de fondo — solo voz
+    print(f"\n  Muxeando audio → {out_file.name}", flush=True)
+    subprocess.run([
+        FFMPEG, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
+        "-i", str(video_path), "-i", str(mp3_file),
+        "-map", "0:v:0", "-map", "1:a:0",
+        "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+        "-shortest", str(out_file)
+    ], capture_output=True, timeout=1800)
+
+    if out_file.exists():
+        size_mb = out_file.stat().st_size / 1024 / 1024
+        dur = get_duration(out_file)
+        print(f"\n{'='*60}")
+        print(f"  ✅ {out_file.name}: {size_mb:.0f}MB, {dur/60:.1f} min")
+        print(f"  {out_file}")
+        print(f"{'='*60}\n")
+    else:
+        err("output.mp4 no se generó")
+        sys.exit(1)
+
+
+# ── Main ───────────────────────────────────────────────────────────────────────
+
+def main():
+    ap = argparse.ArgumentParser(
+        description="Render Farandula Formato 2 — stream continuo con imágenes en segundo exacto"
+    )
+    ap.add_argument("folder", help="Carpeta del video (debe contener audio.mp3, clips_ref/ y mono_state.json)")
+    ap.add_argument("--forzar", action="store_true",
+                    help="Incluir clips rechazados en el dashboard")
+    args = ap.parse_args()
+
+    folder   = pathlib.Path(args.folder).resolve()
+    mp3_file = folder / "audio.mp3"
+    out_file = folder / "output.mp4"   # nombre fijo; el sufijo _vhs_v3 era un leftover de LUCHA VILLA
+
+    if not folder.is_dir():
+        err(f"{folder} no existe")
+        sys.exit(1)
+    if not mp3_file.exists():
+        err(f"Falta audio.mp3 en {folder}")
+        sys.exit(1)
+
+    total_dur = get_duration(mp3_file)
+    if total_dur <= 0:
+        err("No se pudo obtener duración de audio.mp3")
+        sys.exit(1)
+
+    print(f"\n{'='*60}")
+    print(f"  RENDER FARANDULA MONO — {folder.name}")
+    print(f"{'='*60}\n")
+    ok(f"Audio: {total_dur:.1f}s ({total_dur/60:.1f} min)")
+
+    tmp_dir = pathlib.Path(tempfile.mkdtemp(prefix="render_mono_"))
+    print(f"  Tmp: {tmp_dir}\n")
+
+    try:
+        # Construir timeline completo desde mono_state.json
+        planos = construir_timeline(folder, tmp_dir, total_dur, forzar=args.forzar)
+        if not planos:
+            err("Sin planos — abortando")
+            sys.exit(1)
+
+        # Concat
+        print(f"\n  Concatenando {len(planos)} planos...", flush=True)
+        video_path = tmp_dir / "video_final.mp4"
+        result = concat_planos(planos, video_path, tmp_dir, total_dur)
+        if not result:
+            err("Concat falló")
+            sys.exit(1)
+        ok(f"Video: {get_duration(video_path):.1f}s")
+
+        # Mux con audio
+        mux_final(video_path, mp3_file, out_file, folder)
+
+    finally:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,84 @@
+{
+  "canal": "historia",
+  "nombre_display": "Historia Animada",
+  "nicho": "Historia y mitología antigua — civilizaciones, misterios y conexiones entre culturas",
+  "sub_nicho": "Mythology Explained (@MythologyExplained)",
+  "canal_referencia": "Animistry (@ytAnimistry)",
+
+  "render": {
+    "crf": 28,
+    "preset": "ultrafast",
+    "audio_k": "128k",
+    "res_w": 1920,
+    "res_h": 1080,
+    "fps": 30,
+    "max_clip_dur": 8.0,
+    "music_vol": 0.12,
+    "workers": 4,
+    "flip_enable": false,
+    "anti_fingerprint": false
+  },
+
+  "subtitulos": {
+    "font": "Arial",
+    "fontsize": 58,
+    "max_chars_per_line": 42,
+    "primary_color": "&H00FFFFFF",
+    "outline_color": "&H00000000",
+    "outline": 4,
+    "bold": true,
+    "margin_v": 70,
+    "quemados": false
+  },
+
+  "harvester": {
+    "source_order": ["flow", "ai33pro", "muapi"],
+    "fuente_imagenes": "ia",
+    "img_w": 1024,
+    "img_h": 576,
+    "prompt_suffix": "cinematic digital painting, ancient history illustration, dramatic lighting, detailed brushwork, moody atmosphere, National Geographic style",
+    "video_prompts_hasta_segundos": 120,
+    "default_source": "flow"
+  },
+
+  "guion": {
+    "min_chars": 14000,
+    "max_chars": 18000,
+    "palabras_por_minuto": 150,
+    "duracion_min": 12,
+    "duracion_max": 18,
+    "idioma": "es",
+    "beats": [
+      {"nombre": "Hook sensorial", "inicio": 0, "fin": 40},
+      {"nombre": "La paradoja", "inicio": 40, "fin": 90},
+      {"nombre": "Cadena causal", "inicio": 90, "fin": 540},
+      {"nombre": "El punto de colision", "inicio": 540, "fin": 780},
+      {"nombre": "El veredicto honesto", "inicio": 780, "fin": 900},
+      {"nombre": "El legado", "inicio": 900, "fin": 999}
+    ]
+  },
+
+  "voz": {
+    "motor": "elevenlabs",
+    "voice_id": "uCQe5kObQIjtylU0HL3m",
+    "perfil": "Narrador documental historia",
+    "musica_vol": -28,
+    "locucion_lufs": -14
+  },
+
+  "personaje": {
+    "nombre": "El Cronista",
+    "show": "Canal Historia Animada",
+    "archivo": "datos/personaje.md"
+  },
+
+  "musica": {
+    "paths_relativos": ["../../_musica/historia/musica_v1.mp3"]
+  },
+
+  "youtube": {
+    "channel_id": "",
+    "credentials_file": "jsonytapi/HistoriaAnimada.json",
+    "token_file": "jsonytapi/tokens/HistoriaAnimada.pickle"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "videos": [
+    {
+      "slug": "piero",
+      "titulo": "Piero: Escribió la Canción que Todo México Lloró... Y MURIÓ en el ASQUEROSO Olvido que Nadie Quiso Ver.",
+      "angulo": "Legados rotos — olvido de la industria + derechos no pagados + exilio por dictadura",
+      "personaje": "Piero (José Luigi Meazza Galíndez)",
+      "fecha": "2026-10-11",
+      "duracion_min": 31.7,
+      "chars_guion": 26590,
+      "estado": "listo_subir",
+      "privacidad": "private",
+      "archivo": "piero/piero_final.mp4"
+    },
+    {
+      "slug": "mijares-boda-siglo",
+      "titulo": "Mijares: La ASQUEROSA Influencia que Destruyó su Boda del Siglo... Y el Nombre Detrás de Todo.",
+      "fecha": "2026-09-11",
+      "duracion_min": 42.9,
+      "estado": "listo"
+    },
+    {
+      "slug": "viviana-gibelli-velasco",
+      "titulo": "Viviana Gibelli: La ASQUEROSA Deuda con Raúl Velasco... Lo que Exigió a Cambio de su Carrera.",
+      "fecha": "2026-09-10",
+      "duracion_min": 46.0,
+      "estado": "listo"
+    },
+    {
+      "slug": "rodolfo-acosta-traicion-final",
+      "titulo": "Rodolfo Acosta: La ASQUEROSA Traición Final... Su Esposa Pidió el Divorcio Mientras Agonizaba.",
+      "fecha": "2026-09-13",
+      "duracion_min": 48.0,
+      "estado": "listo"
+    },
+    {
+      "slug": "rafael-buendia-industria-canciones",
+      "titulo": "Rafael Buendía: La ASQUEROSA Industria que le Robó 500 Canciones... Y lo Dejó Morir Solo.",
+      "fecha": "2026-09-14",
+      "duracion_min": 44.0,
+      "estado": "subido_privado",
+      "canal": "Expediente de Famosos",
+      "youtube_id": "T_hn5R5rf0s"
+    },
+    {
+      "slug": "alma-muriel-lisalde-confesion",
+      "titulo": "Alma Muriel: La ASQUEROSA Verdad de Lisalde que Nadie Supo... La Confesión que se Llevó a la Tumba.",
+      "angulo": "La confesión final antes de morir (lo que encontraron al morir)",
+      "fecha": "2026-09-22",
+      "duracion_min": 44.4,
+      "chars_guion": 38373,
+      "estado": "listo_subir",
+      "privacidad": "private"
+    },
+    {
+      "slug": "grecia-colmenares-boda-pelegri",
+      "titulo": "Grecia Colmenares: La ASQUEROSA Boda en 6 Meses... Y el Divorcio de Pelegri que Nadie Explicó.",
+      "angulo": "Matrimonio relámpago con Marcelo Pelegri — divorcio sin explicación — silencio de 40 años",
+      "fecha": "2026-09-24",
+      "duracion_min": 49.5,
+      "estado": "subido_privado",
+      "canal": "CaxandoFamosos",
+      "youtube_id": "ADRkoXzGNYs",
+      "privacidad": "private"
+    },
+    {
+      "slug": "horacio-gomez-bolanos-sida",
+      "titulo": "Godínez: La BRUTAL Vedette que lo Infectó de SIDA... El Secreto que Chespirito no Pudo Callar.",
+      "personaje": "Horacio Gómez Bolaños",
+      "angulo": "El cuerpo como precio — SIDA, vedette, muerte silenciosa",
+      "fecha": "2026-10-21",
+      "estado": "listo_para_subir",
+      "duracion_min": 33.8,
+      "chars_guion": 29032,
+      "monetizado": false
+    }
+  ],
+  "victoria-ruffo-boda-falsa": {
+    "titulo": "Victoria Ruffo: La ASQUEROSA Trampa que Armó Eugenio Derbez... La Boda que Nunca Fue Real.",
+    "angulo": "Trampa / Boda sin validez legal — Eugenio Derbez organizó ceremonia falsa estando Victoria embarazada; silencio de 30 años",
+    "fecha": "2026-09-18",
+    "estado": "listo_para_subir",
+    "duracion_min": 42.8,
+    "archivo": "victoria-ruffo-boda-falsa/victoria-ruffo-boda-falsa_final.mp4"
+  },
+  "alma-delfina-prision-salvador-pineda": {
+    "titulo": "Alma Delfina: La ASQUEROSA Prisión que le Puso Salvador Pineda... La Noche que se Escondió Detrás de una Puerta.",
+    "angulo": "Violencia emocional / control coercitivo — 4 años escondiendo el miedo mientras era Babi para todo México",
+    "fecha": "2026-09-17",
+    "estado": "listo_para_subir",
+    "duracion_min": 44.3,
+    "archivo": "alma-delfina-prision-salvador-pineda/alma-delfina-prision-salvador-pineda_final.mp4"
+  },
+  "sandra-reyes-padre-secreto": {
+    "titulo": "Sandra Reyes: La ASQUEROSA Verdad del Padre que Ocultó... El Secreto que se Llevó a la Tumba.",
+    "angulo": "Hijo secreto / Padre desconocido — nombre del padre de Gerónimo Parada Reyes nunca revelado",
+    "fecha": "2026-09-14",
+    "estado": "listo_para_subir",
+    "duracion_min": 45.1,
+    "archivo": "sandra-reyes-padre-secreto/sandra-reyes-padre-secreto_final.mp4"
+  },
+  "hilda-carrero-serrano-40-anos": {
+    "titulo": "Hilda Carrero: la ASQUEROSA Verdad que Serrano Guardó 40 Años... Y el Amor que Nadie Confirmó.",
+    "angulo": "Traición profesional — dupla perfecta que escondía roces, celos y peso emocional desigual",
+    "fecha": "2026-09-15",
+    "estado": "listo_para_subir",
+    "duracion_min": 46.4,
+    "archivo": "hilda-carrero-serrano-40-anos/hilda-carrero-serrano-40-anos_final.mp4"
+  },
+  "arturo-martinez-herencia-hijos": {
+    "titulo": "Arturo Martínez: La ASQUEROSA Herencia que Dejó a Sus 6 Hijos... Y el que Murió Primero.",
+    "angulo": "Hijo que murió primero / Legado roto",
+    "fecha": "2026-09-13",
+    "estado": "listo_para_subir",
+    "duracion_min": 43.1,
+    "archivo": "arturo-martinez-herencia-hijos/arturo-martinez-herencia-hijos_final.mp4"
+  },
+  "rodolfo-de-anda-maldicion-hijos": {
+    "titulo": "Rodolfo de Anda: La BRUTAL Maldición que Heredaron sus Hijos... Y la Muerte que Nadie Explicó.",
+    "angulo": "Maldición dinástica — crimen de Agustín/Ana Berta Lepe, hermano muerto a 16 años, rechazo amputación, Junior muerto a 57 sin causa divulgada",
+    "fecha": "2026-09-20",
+    "estado": "listo_para_subir",
+    "duracion_min": 43.0,
+    "archivo": "rodolfo-de-anda-maldicion-hijos/rodolfo-de-anda-maldicion-hijos_final.mp4"
+  },
+  "carlos-olivier-hijo-secreto": {
+    "titulo": "Carlos Olivier: La ASQUEROSA Verdad del Hijo que Ocultó Toda su Vida... El que Su Esposa Nunca Conoció.",
+    "angulo": "Hijo secreto con cubana (Carlos Javier, ~1989) + enfermedad oculta (esclerosis múltiple) + muerte sin explicar",
+    "fecha": "2026-09-17",
+    "estado": "subido_privado",
+    "canal": "CaxandoFamosos",
+    "youtube_id": "3mWrIoKdOBE",
+    "duracion_min": 45.9,
+    "archivo": "carlos-olivier-hijo-secreto/carlos-olivier-hijo-secreto_final.mp4"
+  },
+  "maricarmen-regueiro-traicion-carrera": {
+    "titulo": "Regueiro: La ASQUEROSA Traición que Borró su Carrera... Veinte Años de Silencio.",
+    "angulo": "Exilio forzado + El poderoso que te destruyó",
+    "personaje": "María del Carmen Regueiro",
+    "fecha": "2026-09-21",
+    "duracion_min": 47.6,
+    "privacidad": "private"
+  },
+  "jorge-luke-brutal-secreto-muerte": {
+    "titulo": "Jorge Luke: El BRUTAL Secreto de su Muerte... Lo que Nadie Encontró en los Reportes Oficiales.",
+    "angulo": "Lo que encontraron al morir",
+    "personaje": "Jorge Luke",
+    "fecha": "2026-09-22",
+    "estado": "producido"
+  },
+  "chabelo-hija-no-reconocida": {
+    "titulo": "Chabelo: Su ASQUEROSA Hija Negada 18 Años... El Secreto que Ocultó Hasta su Muerte.",
+    "angulo": "Hija no reconocida — Oralia Pérez y Diana, demanda ADN 2008, silencio hasta la muerte (25 marzo 2023)",
+    "personaje": "Chabelo (Xavier López)",
+    "fecha": "2026-09-26",
+    "duracion_min": 46.2,
+    "chars_guion": 41517,
+    "estado": "listo_subir",
+    "privacidad": "private",
+    "archivo": "chabelo-hija-no-reconocida/chabelo-hija-no-reconocida_final.mp4"
+  }
+}

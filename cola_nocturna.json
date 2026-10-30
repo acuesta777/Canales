@@ -1,0 +1,18 @@
+[
+  {
+    "canal": "secretos-mexicanos",
+    "personaje": "juan-carlos-barreto",
+    "carpeta": "secretos-mexicanos/juan-carlos-barreto/",
+    "render_script": "render_secretos-mexicanos.py",
+    "agregado": "2026-09-08",
+    "estado": "completado"
+  },
+  {
+    "canal": "secretos-mexicanos",
+    "personaje": "veronica-castro-cristian",
+    "carpeta": "secretos-mexicanos/veronica-castro-cristian/",
+    "render_script": "render_secretos-mexicanos.py",
+    "agregado": "2026-09-08",
+    "estado": "completado"
+  }
+]

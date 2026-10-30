@@ -1,0 +1,42 @@
+{
+  "Pedro Armendariz": {
+    "label": "PEDRO_ARMENDARIZ",
+    "icloud_folder": "Pedro Armendariz",
+    "prefix": "01_pedro_armendariz",
+    "clips": [
+      {
+        "slot": 1,
+        "filename": "01_pedro_armendariz_01.mp4",
+        "source_path": "/Users/anyelocuesta/Downloads/Canales/EpocaDeOro/Video-002 Galanes Murieron Miseria/hook-motion/01_pedro_armendariz_01.mp4"
+      }
+    ],
+    "photos": [
+      {
+        "slot": 1,
+        "filename": "01_pedro_armendariz_01.jpg"
+      },
+      {
+        "slot": 2,
+        "filename": "01_pedro_armendariz_02.jpg"
+      }
+    ]
+  },
+  "Jorge Negrete": {
+    "label": "JORGE_NEGRETE",
+    "icloud_folder": "Jorge Negrete",
+    "prefix": "02_jorge_negrete",
+    "clips": [
+      {
+        "slot": 1,
+        "filename": "02_jorge_negrete_01.mp4",
+        "source_path": "/Users/anyelocuesta/Downloads/Canales/EpocaDeOro/Video-002 Galanes Murieron Miseria/hook-motion/02_jorge_negrete_01.mp4"
+      }
+    ],
+    "photos": [
+      {
+        "slot": 1,
+        "filename": "02_jorge_negrete_01.jpg"
+      }
+    ]
+  }
+}

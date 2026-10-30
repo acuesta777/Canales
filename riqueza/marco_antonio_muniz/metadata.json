@@ -1,0 +1,31 @@
+{
+  "titulo": "Así es la lujosa vida de Marco Antonio Muñiz — el bolero, la fortuna y el regreso a Guadalajara",
+  "descripcion": "Marco Antonio Muñiz construyó una fortuna de entre ocho y doce millones de dólares con solo su voz. Más de seiscientas canciones, setenta años de carrera, y un retiro discreto en Guadalajara.",
+  "tags": ["Marco Antonio Muñiz", "bolero mexicano", "vida de lujo", "fortuna", "Guadalajara", "ícono del bolero", "música mexicana", "época de oro", "cantantes mexicanos", "Capullito de Alelí"],
+  "estado": "pendiente",
+  "youtube_id": null,
+  "youtube_url": null,
+  "fecha_generacion": "2026-10-28",
+  "fecha_subida": null,
+  "canal": null,
+  "personaje": "marco_antonio_muniz",
+  "nicho": "riqueza",
+  "privacidad": "private",
+  "miniaturas": {
+    "miniatura_1": "pendiente",
+    "miniatura_2": "pendiente",
+    "miniatura_3": "pendiente"
+  },
+  "pipeline": {
+    "titulo": "completado",
+    "guion": "completado",
+    "audio": "completado",
+    "subtitulos": "completado",
+    "imagenes": "completado",
+    "video": "completado",
+    "miniaturas": "pendiente",
+    "youtube": "pendiente"
+  },
+  "deleted_yt_clips": {},
+  "rejected_yt_clips": {}
+}

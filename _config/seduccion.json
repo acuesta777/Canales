@@ -1,0 +1,64 @@
+{
+  "canal": "seduccion",
+  "nombre_display": "Enigma Estoica",
+
+  "render": {
+    "crf": 28,
+    "preset": "ultrafast",
+    "audio_k": "128k",
+    "res_w": 1920,
+    "res_h": 1080,
+    "fps": 30,
+    "max_clip_dur": 8.0,
+    "music_vol": 0.12,
+    "speed_range": 0.04,
+    "flip_enable": false,
+    "workers": 4
+  },
+
+  "subtitulos": {
+    "font": "Arial",
+    "fontsize": 58,
+    "max_chars_per_line": 42,
+    "primary_color": "&H00FFFFFF",
+    "outline_color": "&H00000000",
+    "outline": 4,
+    "bold": true,
+    "margin_v": 70
+  },
+
+  "harvester": {
+    "default_source": "flow",
+    "source_order": [
+      "flow",
+      "ia"
+    ],
+    "clip_secs": 6,
+    "img_w": 1024,
+    "img_h": 576,
+    "prompt_suffix": "neon glowing stick figures on pure solid black background, fluorescent neon style, no text, no letters, no words, no captions",
+    "ken_burns_flip": false,
+    "zoompan": {
+      "enabled": true,
+      "clip_secs": 6,
+      "fps": 30,
+      "scale_target": "3840:2160",
+      "output_res": "1920x1080",
+      "preview_res": "640:360",
+      "era_filter": false
+    },
+    "era_ranges": {
+      "bw":      [0, 1939],
+      "vintage": [1940, 1989],
+      "color":   [1990, 9999]
+    }
+  },
+
+  "musica": {
+    "paths_relativos": [
+      "musica.mp3",
+      "../../Musica/seduccion/musica_v1.mp3",
+      "../../Musica/seduccion/musica_v2.mp3"
+    ]
+  }
+}

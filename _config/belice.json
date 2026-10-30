@@ -1,0 +1,31 @@
+{
+  "nombre_display": "Belice Documental",
+  "srt": {
+    "min_mp3_duration": 60,
+    "cut_seconds": 600
+  },
+  "timeline_planner": {
+    "channel_context": "A Spanish-language YouTube documentary channel about countries, travel, and culture. This video is about Belize — its history, nature, beaches, Mayan ruins, jungle, and the Caribbean reef.",
+    "cover_mode": "full",
+    "image_style": "Cinematic hyperrealistic photo, dramatic lighting, 16:9, National Geographic style",
+    "veo_prompt_note": "Generate a single hyperrealistic image that illustrates exactly what the narrator is describing.",
+    "trigger_types_description": "- Geography/maps: show aerial views, maps, Central American landscape\n- History/colonial: British soldiers, pirate ships, jungle forts, 18th century scenes\n- Culture/language: diverse people speaking, Caribbean market scenes, street signs in English\n- Nature/jungle: dense Belizean jungle, wildlife, toucans, howler monkeys\n- Coast/reef: Caribbean turquoise water, coral reef aerial, scuba diving\n- Cities: Belize City streets, colorful wooden colonial buildings, riverside scenes"
+  },
+  "harvester": {
+    "default_source": "pexels",
+    "source_order": ["pexels", "pixabay", "flow"],
+    "clip_secs": 6,
+    "img_w": 1376,
+    "img_h": 768,
+    "prompt_suffix": "Belize Central America cinematic documentary 16:9",
+    "zoompan": {
+      "enabled": true,
+      "clip_secs": 6,
+      "fps": 30,
+      "scale_target": "3840:2160",
+      "output_res": "1920x1080",
+      "preview_res": "640:360",
+      "era_filter": false
+    }
+  }
+}

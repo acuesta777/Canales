@@ -1,0 +1,6 @@
+{
+  "srt": {
+    "min_mp3_duration": 60,
+    "cut_seconds": 600
+  }
+}

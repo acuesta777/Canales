@@ -1,0 +1,132 @@
+[
+  {
+    "label": "00_HOOK",
+    "name": "HOOK",
+    "start": 0.0,
+    "end": 14.85,
+    "duration": 14.85,
+    "is_hook": true,
+    "is_cierre": false,
+    "folder": null
+  },
+  {
+    "label": "01_PEDRO ARMENDARIZ",
+    "name": "PEDRO ARMENDARIZ",
+    "start": 14.85,
+    "end": 214.18,
+    "duration": 199.33,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "PEDRO ARMENDARIZ"
+  },
+  {
+    "label": "02_JORGE NEGRETE",
+    "name": "JORGE NEGRETE",
+    "start": 214.18,
+    "end": 388.32,
+    "duration": 174.14,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "JORGE NEGRETE"
+  },
+  {
+    "label": "03_LUIS AGUILAR",
+    "name": "LUIS AGUILAR",
+    "start": 388.32,
+    "end": 599.69,
+    "duration": 211.37,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "LUIS AGUILAR"
+  },
+  {
+    "label": "04_ARTURO DE CORDOVA",
+    "name": "ARTURO DE CORDOVA",
+    "start": 192.79,
+    "end": 599.69,
+    "duration": 406.9,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "ARTURO DE CORDOVA"
+  },
+  {
+    "label": "05_MID_ROLL_CTA",
+    "name": "MID_ROLL_CTA",
+    "start": 242.92,
+    "end": 599.69,
+    "duration": 356.77,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "MID_ROLL_CTA"
+  },
+  {
+    "label": "06_EMILIO TUERO",
+    "name": "EMILIO TUERO",
+    "start": 247.2,
+    "end": 599.69,
+    "duration": 352.49,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "EMILIO TUERO"
+  },
+  {
+    "label": "07_ABEL SALAZAR",
+    "name": "ABEL SALAZAR",
+    "start": 294.88,
+    "end": 599.69,
+    "duration": 304.81,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "ABEL SALAZAR"
+  },
+  {
+    "label": "08_ANTONIO BADU",
+    "name": "ANTONIO BADU",
+    "start": 345.41,
+    "end": 599.69,
+    "duration": 254.28,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "ANTONIO BADU"
+  },
+  {
+    "label": "09_CARLOS LOPEZ MOCTEZUMA",
+    "name": "CARLOS LOPEZ MOCTEZUMA",
+    "start": 396.75,
+    "end": 599.69,
+    "duration": 202.94,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "CARLOS LOPEZ MOCTEZUMA"
+  },
+  {
+    "label": "10_TITO GUIZAR",
+    "name": "TITO GUIZAR",
+    "start": 449.81,
+    "end": 599.69,
+    "duration": 149.88,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "TITO GUIZAR"
+  },
+  {
+    "label": "11_VICTOR JUNCO",
+    "name": "VICTOR JUNCO",
+    "start": 505.04,
+    "end": 591.69,
+    "duration": 86.65,
+    "is_hook": false,
+    "is_cierre": false,
+    "folder": "VICTOR JUNCO"
+  },
+  {
+    "label": "12_CIERRE",
+    "name": "CIERRE",
+    "start": 591.69,
+    "end": 599.69,
+    "duration": 8.0,
+    "is_hook": false,
+    "is_cierre": true,
+    "folder": null
+  }
+]

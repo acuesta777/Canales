@@ -1,0 +1,41 @@
+# Videos y audio
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.mov
+*.avi
+*.mkv
+
+# Imágenes generadas
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Zips y archivos grandes
+*.zip
+*.tar.gz
+
+# Carpetas de clips e imágenes generadas
+riqueza/*/clips/
+riqueza/*/03-imagenes/
+futbol/*/clips/
+futbol/*/03-imagenes/
+series/*/clips/
+series/*/03-imagenes/
+farandula/*/clips/
+farandula/*/03-imagenes/
+
+# Logs
+logs/
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos temporales
+.DS_Store
+/tmp/

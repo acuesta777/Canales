@@ -1,0 +1,22 @@
+{
+  "visual_timeline": [
+    {
+      "segment_id": 0,
+      "type": "hyperframes",
+      "start_seconds": 0,
+      "end_seconds": 7,
+      "duration": 7,
+      "descripcion": "Imagen HyperFrames del hook (cuadrícula + badges dorados)"
+    },
+    {
+      "segment_id": 1,
+      "type": "flow",
+      "start_seconds": 7,
+      "end_seconds": 11,
+      "duration": 4,
+      "trigger_type": "MUERTE",
+      "ia_prompt": "Cinematic hyperrealistic photo of a crumpled peso bill on wet cobblestones, representing the man's last remaining money, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "srt_text": "aguantar más? ¿Y sabes cuánto dinero le quedaba cuando murió el hombre"
+    }
+  ]
+}

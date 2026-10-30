@@ -1,0 +1,100 @@
+{
+  "canal": "familias",
+  "nombre_display": "Familias de Riquezas",
+  "nicho": "Dinastías ricas de México — familias, artistas y grupos",
+  "sub_nicho": "Familias mexicanas / celebridades mexicanas con fortuna",
+  "render": {
+    "crf": 28,
+    "preset": "ultrafast",
+    "audio_k": "128k",
+    "res_w": 1920,
+    "res_h": 1080,
+    "fps": 30,
+    "max_clip_dur": 8.0,
+    "music_vol": 0.1,
+    "speed_range": 0.04,
+    "flip_enable": true,
+    "workers": 2,
+    "burn_subs": false
+  },
+  "subtitulos": {
+    "font": "Arial",
+    "fontsize": 58,
+    "max_chars_per_line": 42,
+    "primary_color": "&H00FFFFFF",
+    "outline_color": "&H00000000",
+    "outline": 4,
+    "bold": true,
+    "margin_v": 70
+  },
+  "harvester": {
+    "default_source": "flow",
+    "source_order": [
+      "flow",
+      "ai33pro",
+      "muapi",
+      "brave"
+    ],
+    "fallback_personas": "brave",
+    "clip_secs": 5,
+    "img_w": 1376,
+    "img_h": 768,
+    "prompt_suffix": "cinematic wealthy family dynasty lifestyle, luxury estate, warm golden hour lighting, rich Mexican family aesthetic, photorealistic, 16:9",
+    "ken_burns_flip": false,
+    "zoompan": {
+      "enabled": true,
+      "clip_secs": 5,
+      "fps": 30,
+      "scale_target": "3840:2160",
+      "output_res": "1920x1080",
+      "preview_res": "640:360",
+      "era_filter": true
+    },
+    "era_ranges": {
+      "bw": [
+        0,
+        1939
+      ],
+      "vintage": [
+        1940,
+        1989
+      ],
+      "color": [
+        1990,
+        9999
+      ]
+    }
+  },
+  "guion": {
+    "min_chars": 22000,
+    "max_chars": 28000,
+    "palabras_por_minuto": 150,
+    "duracion_min": 25,
+    "duracion_max": 35,
+    "estructura": "inmigrante_origen_golpe_vuelta"
+  },
+  "voz": {
+    "motor": "ai33pro",
+    "voice_id": "fishaudio_24b0be469dae4902bb8f7736813a55f3",
+    "musica_vol": -28,
+    "locucion_lufs": -14
+  },
+  "srt": {
+    "solo_primeros_segundos": 600
+  },
+  "dashboard": {
+    "puerto": 5004
+  },
+  "musica": {
+    "paths_relativos": [
+      "musica.mp3",
+      "../musica/musica_v1.mp3",
+      "../musica/musica_v2.mp3"
+    ]
+  },
+  "youtube": {
+    "channel_id": "",
+    "credentials_file": "jsonytapi/Familias.json",
+    "token_file": "jsonytapi/tokens/Familias.pickle"
+  }
+}

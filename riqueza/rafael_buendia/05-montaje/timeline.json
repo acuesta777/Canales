@@ -1,0 +1,268 @@
+{
+  "visual_timeline": [
+    {
+      "segment_id": 1,
+      "source": "flow",
+      "start_seconds": 0,
+      "end_seconds": 8.0,
+      "duration": 8.0,
+      "scene_description_es": "Calle tranquila en Orlando, Florida. Casas de estuco modestas con jardines pequeños y macetas. Luz cálida de tarde filtrándose entre palmeras.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a quiet residential street in Orlando Florida, modest stucco houses with small gardens and potted flowers, warm afternoon sunlight filtering through palm trees, peaceful neighborhood atmosphere, cinematic lighting",
+      "covers_text": "Fotografías descoloridas lo muestran junto a Vicente Fernández en un estudio de grabación de los años 70.",
+      "trigger_type": "cinema"
+    },
+    {
+      "segment_id": 2,
+      "source": "flow",
+      "start_seconds": 209,
+      "end_seconds": 217,
+      "duration": 8,
+      "scene_description_es": "Un hombre con una guitarra frente a un estadio lleno de gente.",
+      "ia_prompt": "Cinematic hyperrealistic photo of Rafael Buendia standing in front of the Rose Bowl stadium with a guitar in hand, surrounded by tens of thousands of people in the 1980s, faded film look, period-accurate, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "En otra foto está de pie frente al Rose Bowl con una guitarra en la mano, rodeado de decenas de miles de personas que vinieron a escucharlo.",
+      "trigger_type": "concert"
+    },
+    {
+      "segment_id": 3,
+      "source": "flow",
+      "start_seconds": 222,
+      "end_seconds": 230,
+      "duration": 8,
+      "scene_description_es": "Discos de oro enmarcados y carteles de películas dirigidas por el artista.",
+      "ia_prompt": "Cinematic hyperrealistic photo of framed gold records hanging next to movie posters for films directed by Rafael Buendia in the 1980s and 1990s, modern color, slightly warm, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "Los discos de oro enmarcados cuelgan junto a carteles de las películas que él mismo dirigió en los años 80 y 90.",
+      "trigger_type": "cinema"
+    },
+    {
+      "segment_id": 4,
+      "source": "flow",
+      "start_seconds": 235,
+      "end_seconds": 243,
+      "duration": 8,
+      "scene_description_es": "Un hombre viendo una cinta VHS antigua en un televisor con antena.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a man adjusting an old TV antenna and watching scenes from a VHS tape in silence, late 1990s, full color vivid, crisp, hyperrealistic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "cuando la artritis le da una tregua, saca una de esas cintas, ajusta la vieja antena del televisor, y ve las escenas en silencio. Ese era yo, dice en voz baja. Ese fue nuestro tiempo.",
+      "trigger_type": "illness"
+    },
+    {
+      "segment_id": 5,
+      "source": "flow",
+      "start_seconds": 292,
+      "end_seconds": 300,
+      "duration": 8,
+      "scene_description_es": "Cuaderno de composición abierto sobre un escritorio, con versos inacabados sobre la memoria y la distancia.",
+      "ia_prompt": "Cinematic hyperrealistic photo of worn composition notebooks open on a wooden desk, filled with half-finished verses about memory and distance, 1990-2009, modern color, slightly warm, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "Hay canciones que llevan meses esperando su última estrofa. Hay otras que nacen de golpe, de una imagen que ve por la ventana o de algo que dice María Elena",
+      "trigger_type": "INTERIOR"
+    },
+    {
+      "segment_id": 6,
+      "source": "flow",
+      "start_seconds": 321,
+      "end_seconds": 324,
+      "duration": 3,
+      "scene_description_es": "Anciano mexicano sentado frente a jóvenes músicos en un centro cultural modesto. Sillas plegables. Luz tenue y cálida. Conversación íntima y seria.",
+      "ia_prompt": "Cinematic hyperrealistic photo of an elderly Mexican man sitting in a plastic chair in a modest community cultural center, speaking quietly to a small group of young musicians who listen attentively, simple room with folding chairs, warm humble lighting",
+      "covers_text": "le habla de la gloria ni de los contratos ni del nombre en el cartel.",
+      "trigger_type": "DOCUMENT"
+    },
+    {
+      "segment_id": 7,
+      "source": "flow",
+      "start_seconds": 333,
+      "end_seconds": 340,
+      "duration": 7,
+      "scene_description_es": "Un escenario de concierto vacío con focos dorados iluminando el espacio, evocando miles de asistentes.",
+      "ia_prompt": "Cinematic hyperrealistic photo of an empty concert stage with golden spotlights illuminating the space, evoking thousands of attendees, 1970s film look, vintage warm color, faded film look, period-accurate, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "El talento te puede hacer famoso, les dice, Pero la humildad te mantiene humano. No confundan nunca el aplauso con el amor.",
+      "trigger_type": "CONCERT"
+    },
+    {
+      "segment_id": 8,
+      "source": "flow",
+      "start_seconds": 345,
+      "end_seconds": 348,
+      "duration": 3,
+      "scene_description_es": "Un gran estadio vacío con asientos que se extienden hasta el horizonte, iluminado por focos tenues.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a large empty stadium with seats stretching to the horizon, dimly lit by spotlights, 1980s film look, vintage warm color, faded film look, period-accurate, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "Los estudiantes lo escuchan con asombro, sin saber que el anciano frágil de voz pausada que tienen frente a ellos llenó arenas en las que",
+      "trigger_type": "CONCERT"
+    },
+    {
+      "segment_id": 9,
+      "source": "flow",
+      "start_seconds": 353,
+      "end_seconds": 357,
+      "duration": 4,
+      "scene_description_es": "Silueta de un hombre apoyando el brazo de una mujer que camina con bastón, iluminados suavemente por la luz del atardecer.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a silhouette of a man supporting the arm of a woman walking with a cane, softly lit by evening light, 1990-2009, modern color, slightly warm, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "María Elena Yaso, su esposa y compañera de dueto durante décadas, es hoy su cuidadora más cercana.",
+      "trigger_type": "ROMANCE"
+    },
+    {
+      "segment_id": 10,
+      "source": "flow",
+      "start_seconds": 368,
+      "end_seconds": 372,
+      "duration": 4,
+      "scene_description_es": "Silueta de mujer de espaldas en habitación tenue",
+      "ia_prompt": "Cinematic hyperrealistic photo of silhouette of a woman from behind in a dimly lit room, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "El amor que empezó frente a los micrófonos, con las voces mezclándose en estudio",
+      "trigger_type": "romance"
+    },
+    {
+      "segment_id": 11,
+      "source": "flow",
+      "start_seconds": 380,
+      "end_seconds": 383,
+      "duration": 3,
+      "scene_description_es": "Pasillo vacío en casa modesta con fotos familiares en la pared. Teléfono sobre mesa pequeña. Luz de tarde. La quietud de un hogar cuyos hijos ya se fueron.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a long empty hallway in a modest house with family photos on the wall, a telephone on a small table, late afternoon light through a window, the quiet emptiness of a home where children have grown and moved away",
+      "covers_text": "la escasez, la distancia de los hijos que ahora viven sus propias vidas",
+      "trigger_type": "poverty"
+    },
+    {
+      "segment_id": 12,
+      "source": "flow",
+      "start_seconds": 399,
+      "end_seconds": 402,
+      "duration": 3,
+      "scene_description_es": "Un primer plano de palmeras recortadas contra un cielo anaranjado y cálido al atardecer, con una ligera bruma.",
+      "ia_prompt": "Cinematic hyperrealistic photo of palm trees silhouetted against a warm, orange sunset sky, slight haze, Florida vibe, 1990s aesthetic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "cuando el sol de Florida se oculta detrás de las palmeras",
+      "trigger_type": "place"
+    },
+    {
+      "segment_id": 13,
+      "source": "flow",
+      "start_seconds": 411,
+      "end_seconds": 414,
+      "duration": 3,
+      "scene_description_es": "Una ilustración médica detallada de una mano afectada por la artritis, con las articulaciones inflamadas y deformadas.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a detailed medical illustration of a hand affected by arthritis, showing swollen and deformed joints, clinical lighting, white background, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "illness",
+      "covers_text": "salen despacio, con cuidado, limitados por la artritis que ya"
+    },
+    {
+      "segment_id": 14,
+      "source": "flow",
+      "start_seconds": 419,
+      "end_seconds": 423,
+      "duration": 4,
+      "scene_description_es": "Cocina humilde con mesa de madera y luz tenue",
+      "ia_prompt": "Cinematic hyperrealistic photo of humble kitchen with bare wooden table and single light, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "poverty",
+      "covers_text": "él es el mismo niño que a los 12 años escribió su primera canción sobre un padre migrante que nunca regresó a casa. Mientras pueda sostener"
+    },
+    {
+      "segment_id": 15,
+      "source": "flow",
+      "start_seconds": 432,
+      "end_seconds": 436,
+      "duration": 4,
+      "scene_description_es": "Carpeta de expediente judicial con sello de goma",
+      "ia_prompt": "Cinematic hyperrealistic photo of worn legal file folder on a desk with rubber stamp, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "document",
+      "covers_text": "la historia de Rafael Buendía hay que mirar los números con honestidad,"
+    },
+    {
+      "segment_id": 16,
+      "source": "flow",
+      "start_seconds": 451,
+      "end_seconds": 455,
+      "duration": 4,
+      "scene_description_es": "Una pila de discos de vinilo apilados en un estudio de grabación con poca luz, cubiertos de polvo y con un aire de abandono.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a stack of vinyl records piled up in a dimly lit recording studio, dusty and abandoned feel, vintage equipment in background, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "radio",
+      "covers_text": "ahí. A lo largo de su carrera registró más de 500 canciones,"
+    },
+    {
+      "segment_id": 17,
+      "source": "flow",
+      "start_seconds": 466,
+      "end_seconds": 470,
+      "duration": 4,
+      "scene_description_es": "Primer plano de la silueta de un hombre con sombrero de mariachi, iluminado por detrás, mientras canta frente a un micrófono de estilo vintage.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a silhouette of a mariachi singer from behind, dramatic backlighting, vintage microphone in foreground, modern color, crisp, hyperrealistic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "Vicente Fernández grabó sus temas, Los Tigres del Norte los",
+      "trigger_type": "radio"
+    },
+    {
+      "segment_id": 18,
+      "source": "flow",
+      "start_seconds": 482,
+      "end_seconds": 489,
+      "duration": 7,
+      "scene_description_es": "Un micrófono de radio vintage en un estudio de transmisión con poca luz, con diales y controles analógicos visibles.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a vintage radio microphone in a dimly lit broadcast studio, analog dials and controls visible, modern color, crisp, hyperrealistic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "covers_text": "de radio norteña o ranchera entre los años 70 y los 90, es muy probable que haya escuchado algo que Rafael Buendía escribió,",
+      "trigger_type": "radio"
+    },
+    {
+      "segment_id": 19,
+      "source": "flow",
+      "start_seconds": 494,
+      "end_seconds": 498,
+      "duration": 4,
+      "scene_description_es": "Una pila de discos de oro y platino apilados, con un brillo sutil, sobre una superficie de madera oscura.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a stack of gold and platinum records, subtle gleam, dark wood surface, modern color, crisp, hyperrealistic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "money",
+      "covers_text": "llegaron: discos de oro y de platino por ventas en México y Estados Unidos. Las Palmas de Oro de la Asociación Mexicana de Periodistas."
+    },
+    {
+      "segment_id": 20,
+      "source": "flow",
+      "start_seconds": 514,
+      "end_seconds": 517,
+      "duration": 3,
+      "scene_description_es": "Una vista aérea estilizada de un paisaje mexicano expansivo y vibrante, simbolizando riqueza en el legado musical.",
+      "ia_prompt": "Cinematic hyperrealistic photo of an expansive and vibrant stylized Mexican landscape aerial view, modern color, crisp, hyperrealistic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "place",
+      "covers_text": "ricas de la historia de la música regional mexicana. Pero los"
+    },
+    {
+      "segment_id": 21,
+      "source": "flow",
+      "start_seconds": 522,
+      "end_seconds": 527,
+      "duration": 5,
+      "scene_description_es": "Estudio de grabación mexicano de los años setenta. Dos músicos revisando partituras manuscritas. Equipo de cinta de carrete en el fondo. Luz cálida vintage.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a vintage 1970s Mexican recording studio interior, two musicians reviewing handwritten sheet music at a worn desk under fluorescent lights, old reel-to-reel tape equipment in background, cinematic warm light",
+      "trigger_type": "document",
+      "covers_text": "Buendía comparte con decenas de compositores de su generación. En las décadas de los 70 y los 80, los compositores firmaban"
+    },
+    {
+      "segment_id": 22,
+      "source": "flow",
+      "start_seconds": 532,
+      "end_seconds": 540,
+      "duration": 8,
+      "scene_description_es": "Contrato editorial de música sobre un escritorio con pluma y billetes escasos. Papel desgastado. Sello visible. Derechos cedidos por poco dinero.",
+      "ia_prompt": "Cinematic hyperrealistic photo of a music publishing contract on a desk with a pen and a small stack of cash bills, worn paper edges, rubber stamp partially visible, dim office lighting, representing rights transferred for minimal payment",
+      "trigger_type": "document",
+      "covers_text": "acuerdos que cedían los derechos de reproducción de sus obras a cambio de anticipos que en ese momento parecían razonables, incluso generosos. Era el precio de entrar al sistema, de grabar, de llegar a"
+    },
+    {
+      "segment_id": 23,
+      "source": "flow",
+      "start_seconds": 545,
+      "end_seconds": 552,
+      "duration": 7,
+      "scene_description_es": "Una carretera vacía y sinuosa que se extiende hacia el horizonte bajo un cielo dramático, simbolizando la entrada a un sistema.",
+      "ia_prompt": "Cinematic hyperrealistic photo of an empty winding road stretching to the horizon under a dramatic sky, modern color, crisp, hyperrealistic, 16:9, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "place",
+      "covers_text": "las radios y a los escenarios. Nadie pensó entonces en el streaming, en las plataformas digitales, en los millones de reproducciones que llegarían décadas después desde teléfonos en todo el mundo."
+    },
+    {
+      "segment_id": 24,
+      "source": "flow",
+      "start_seconds": 557,
+      "end_seconds": 562,
+      "duration": 5,
+      "scene_description_es": "Billetes de peso esparcidos sobre escritorio de madera",
+      "ia_prompt": "Cinematic hyperrealistic photo of peso bills scattered on a worn wooden desk, cinematic lighting, no text, no letters, no faces visible, 16:9",
+      "trigger_type": "money",
+      "covers_text": "Cuando llegó esa era, esas cláusulas ya estaban escritas con tinta que no tenía reversa. Hoy las canciones de Rafael Buendía siguen sonando, siguen generando"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "canal": "botica",
+  "nombre_display": "La Botica Ancestral",
+
+  "render": {
+    "crf": 28,
+    "preset": "ultrafast",
+    "audio_k": "128k",
+    "res_w": 1920,
+    "res_h": 1080,
+    "fps": 30,
+    "max_clip_dur": 8.0,
+    "music_vol": 0.10,
+    "speed_range": 0.04,
+    "flip_enable": false,
+    "workers": 4
+  },
+
+  "subtitulos": {
+    "font": "Georgia",
+    "fontsize": 56,
+    "max_chars_per_line": 42,
+    "primary_color": "&H00DDD0B0",
+    "outline_color": "&H000F1209",
+    "outline": 5,
+    "bold": false,
+    "margin_v": 70
+  },
+
+  "harvester": {
+    "default_source": "flow",
+    "source_order": ["flow", "brave", "ia"],
+    "fallback_personas": "brave",
+    "clip_secs": 6,
+    "img_w": 1376,
+    "img_h": 768,
+    "prompt_suffix": "",
+    "ken_burns_flip": false,
+    "zoompan": {
+      "enabled": true,
+      "clip_secs": 6,
+      "fps": 30,
+      "scale_target": "3840:2160",
+      "output_res": "1920x1080",
+      "preview_res": "640:360",
+      "era_filter": false
+    },
+    "era_ranges": {
+      "bw":      [0, 1939],
+      "vintage": [1940, 1989],
+      "color":   [1990, 9999]
+    }
+  },
+
+  "timeline_planner": {
+    "cover_mode": "full",
+    "max_batch_seconds": 90,
+    "channel_context": "Spanish-language YouTube channel called 'La Botica Ancestral' about medicinal plants and ancestral remedies. Each video focuses on ONE specific plant — the narrator names it explicitly in the SRT. CRITICAL: every ia_prompt must reference the EXACT plant, ingredient, symptom or action being narrated in that moment. Never use vague descriptions like 'generic plant' or 'red beverage' — name Hibiscus sabdariffa, Jamaica flowers, dried red calyxes, clay pot with infusion, etc. The visual style is hand-drawn illustration like a vintage botanical comic book.",
+    "trigger_types_description": "PLANT: any herb, plant, leaf, root, flower mentioned by name. AILMENT: any health condition, pain, disease, symptom described. PREPARATION: tea, infusion, tincture, poultice, how to prepare or apply. SCIENCE: biological mechanism, active compound, study, research mentioned. HISTORY: historical use, ancient culture, traditional medicine, ethnobotany. LOCATION: geographic origin of plant (Andes, Amazon, Mediterranean, etc.). CONTRAINDICATION: warnings, interactions, who should not use it.",
+    "image_style": "Hand-drawn illustration, comic book ink outlines, sepia and night-blue tones, hatching shading, narrative scene with a person doing an action related to what is being narrated, vintage lantern or candlelight atmosphere, aged paper texture, no text, no watermarks, 16:9",
+    "veo_prompt_note": "VEO prompt describes camera movement only, max 15 words. Examples: 'Slow pan across illustrated scene, warm lantern light', 'Gentle zoom into character hands preparing remedy'."
+  },
+
+  "guion": {
+    "chars_min": 10800,
+    "chars_max": 13500,
+    "duracion_min_min": 12,
+    "duracion_max_min": 15,
+    "beats": [
+      {"nombre": "problema", "tiempo": "0:00-1:30", "keywords": ["dolor", "sufre", "afecta", "millones", "síntoma", "padecen", "problema"]},
+      {"nombre": "planta_revelada", "tiempo": "1:30-4:00", "keywords": ["planta", "hierba", "hoja", "raíz", "flor", "árbol", "especie"]},
+      {"nombre": "mecanismo", "tiempo": "4:00-8:00", "keywords": ["compuesto", "principio activo", "estudio", "investigación", "actúa", "inhibe", "reduce"]},
+      {"nombre": "como_usarla", "tiempo": "8:00-11:00", "keywords": ["infusión", "té", "preparar", "dosis", "tomar", "aplicar", "contraindicación"]},
+      {"nombre": "planta_complementaria", "tiempo": "11:00-13:30", "keywords": ["combinado", "complementa", "también", "junto con", "potencia"]},
+      {"nombre": "cierre", "tiempo": "13:30-15:00", "keywords": ["próximo", "siguiente", "descubrirás", "en nuestro próximo"]}
+    ],
+    "disclaimer_obligatorio": ["antes de modificar", "consulta con", "profesional de salud", "médico", "no sustituye"],
+    "prohibido": ["deja de tomar tu medicamento", "cura definitivamente", "elimina para siempre", "diagnóstico"]
+  },
+
+  "presupuesto": {
+    "creditos_ia_por_video": 1500,
+    "modelo_imagen": "krea-2-medium",
+    "creditos_por_imagen": 364,
+    "max_imagenes_ia": 4,
+    "fallback_sin_footage": "ia"
+  },
+
+  "srt": {
+    "cut_seconds": 900,
+    "min_mp3_duration": 700
+  },
+
+  "musica": {
+    "paths_relativos": [
+      "musica.mp3",
+      "../../_musica/botica/musica_v1.mp3",
+      "../../_musica/botica/musica_v2.mp3",
+      "../_musica/musica_ambient_dark.mp3"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "label": "00_HOOK",
+    "file": "00_HOOK.txt",
+    "char_start": 0,
+    "char_end": 274
+  },
+  {
+    "label": "01_PEDRO ARMENDARIZ",
+    "file": "01_PEDRO ARMENDARIZ.txt",
+    "char_start": 274,
+    "char_end": 3177
+  },
+  {
+    "label": "02_JORGE NEGRETE",
+    "file": "02_JORGE NEGRETE.txt",
+    "char_start": 3177,
+    "char_end": 5720
+  },
+  {
+    "label": "03_LUIS AGUILAR",
+    "file": "03_LUIS AGUILAR.txt",
+    "char_start": 5720,
+    "char_end": 8115
+  },
+  {
+    "label": "04_ARTURO DE CORDOVA",
+    "file": "04_ARTURO DE CORDOVA.txt",
+    "char_start": 8115,
+    "char_end": 10225
+  },
+  {
+    "label": "05_MID_ROLL_CTA",
+    "file": "05_MID_ROLL_CTA.txt",
+    "char_start": 10225,
+    "char_end": 10405
+  },
+  {
+    "label": "06_EMILIO TUERO",
+    "file": "06_EMILIO TUERO.txt",
+    "char_start": 10405,
+    "char_end": 12412
+  },
+  {
+    "label": "07_ABEL SALAZAR",
+    "file": "07_ABEL SALAZAR.txt",
+    "char_start": 12412,
+    "char_end": 14539
+  },
+  {
+    "label": "08_ANTONIO BADU",
+    "file": "08_ANTONIO BADU.txt",
+    "char_start": 14539,
+    "char_end": 16700
+  },
+  {
+    "label": "09_CARLOS LOPEZ MOCTEZUMA",
+    "file": "09_CARLOS LOPEZ MOCTEZUMA.txt",
+    "char_start": 16700,
+    "char_end": 18933
+  },
+  {
+    "label": "10_TITO GUIZAR",
+    "file": "10_TITO GUIZAR.txt",
+    "char_start": 18933,
+    "char_end": 21258
+  },
+  {
+    "label": "11_VICTOR JUNCO",
+    "file": "11_VICTOR JUNCO.txt",
+    "char_start": 21258,
+    "char_end": 24317
+  },
+  {
+    "label": "12_CIERRE",
+    "file": "12_CIERRE.txt",
+    "char_start": 24317,
+    "char_end": 25242
+  }
+]

@@ -1,0 +1,596 @@
+1
+00:00:00,272 --> 00:00:04,271
+Hay una calle en Monterrey, Nuevo León, donde los autos pasan despacio
+
+2
+00:00:04,527 --> 00:00:07,803
+y los vecinos se saludan sin saber muy bien de dónde vienen los
+
+3
+00:00:08,303 --> 00:00:12,106
+demás. Una mañana cualquiera de 2026, una joven
+
+4
+00:00:12,138 --> 00:00:15,863
+baja de un vuelo proveniente de la Ciudad de México cargando una
+
+5
+00:00:16,363 --> 00:00:20,359
+mochila pequeña y un estuche que cualquiera adivinaría que contiene algo
+
+6
+00:00:20,859 --> 00:00:24,855
+valioso. No hay fotógrafos esperándola, no hay asistentes corriendo
+
+7
+00:00:25,355 --> 00:00:28,643
+detrás. Solo el calor del norte, el ruido familiar del aeropuerto,
+
+8
+00:00:28,931 --> 00:00:31,692
+y alguien de confianza que la recoge sin hacer escándalo.
+
+9
+00:00:32,462 --> 00:00:36,104
+Esa joven tiene un apellido que en México vale décadas de historia viva.
+
+10
+00:00:36,778 --> 00:00:40,630
+Su abuelo llenó las plazas más grandes del país durante 40 años
+
+11
+00:00:41,130 --> 00:00:44,497
+seguidos. Su abuela tiene una voz que millones de personas reconocen
+
+12
+00:00:44,997 --> 00:00:48,814
+al primer compás, sin necesidad de escuchar el nombre. Y su familia posee
+
+13
+00:00:48,974 --> 00:00:52,633
+uno de los ranchos más fotografiados de toda la República Mexicana.
+
+14
+00:00:53,146 --> 00:00:57,011
+Cuando alguien pronuncia el apellido Aguilar en cualquier rincón de México o
+
+15
+00:00:57,511 --> 00:01:01,678
+entre las comunidades hispanas de Estados Unidos, la imagen que aparece de inmediato
+
+16
+00:01:01,742 --> 00:01:05,847
+es siempre la misma: caballos trotando bajo el cielo abierto de Zacatecas,
+
+17
+00:01:06,056 --> 00:01:09,873
+sombreros anchos y bordados, trajes de charro resplandecientes,
+
+18
+00:01:10,306 --> 00:01:14,491
+mariachis tocando hasta el amanecer y una fortuna que se ha construido
+
+19
+00:01:14,991 --> 00:01:18,645
+y transmitido durante varias generaciones seguidas. Por eso
+
+20
+00:01:18,966 --> 00:01:22,298
+Mucha gente asume que Majo Aguilar vive exactamente así.
+
+21
+00:01:22,651 --> 00:01:26,256
+Con una finca propia llena de animales. Con una colección
+
+22
+00:01:26,756 --> 00:01:30,262
+de caballos a su nombre. Con el tipo de vida extravagante y visible
+
+23
+00:01:30,762 --> 00:01:33,995
+que el público imagina automáticamente cuando escucha ese apellido.
+
+24
+00:01:34,524 --> 00:01:37,953
+Y sin embargo, la realidad de su vida en 2026 es
+
+25
+00:01:38,453 --> 00:01:42,247
+completamente distinta a esa imagen. Majo tiene 27 años.
+
+26
+00:01:42,695 --> 00:01:45,964
+Ese mismo año acaba de ganar 2 premios importantes en
+
+27
+00:01:46,464 --> 00:01:50,055
+Premio Lo Nuestro. Artista Femenina del Año en Música Mexicana
+
+28
+00:01:50,152 --> 00:01:53,956
+y Mejor Combinación Femenina por la canción Brujería junto a Yuridia.
+
+29
+00:01:54,631 --> 00:01:57,761
+Tiene contrato vigente con Fonovisa Records y Universal
+
+30
+00:01:58,261 --> 00:02:01,854
+Music Latin desde 2019, renovado con orgullo en enero de
+
+31
+00:02:02,354 --> 00:02:05,964
+2025, y acaba de confirmar una presentación en solitario
+
+32
+00:02:06,464 --> 00:02:10,892
+en el Auditorio Nacional de Ciudad de México para el 13 de noviembre de 2026.
+
+33
+00:02:11,422 --> 00:02:14,873
+Un hito que muy pocos artistas de su generación han podido
+
+34
+00:02:15,373 --> 00:02:19,508
+alcanzar con su propio nombre. Y aún así, cuando alguien le pregunta
+
+35
+00:02:20,008 --> 00:02:23,679
+qué hace en su tiempo libre, su respuesta no menciona yates ni mansiones
+
+36
+00:02:24,179 --> 00:02:27,673
+ni fincas. Habla de leer libros tranquilamente y de jugar Zelda
+
+37
+00:02:28,173 --> 00:02:31,667
+en su Nintendo Switch, tratando de usar el teléfono lo menos posible.
+
+38
+00:02:32,260 --> 00:02:35,677
+¿Cómo llegó aquí alguien con ese apellido? ¿Por qué vive así?
+
+39
+00:02:36,045 --> 00:02:39,799
+Y sobre todo, ¿qué eligió realmente Majo Aguilar cuando tuvo
+
+40
+00:02:39,959 --> 00:02:43,809
+todas las puertas abiertas delante de ella? La respuesta es
+
+41
+00:02:44,309 --> 00:02:47,754
+más interesante de lo que nadie imaginaba. ¿Dónde vive Majo
+
+42
+00:02:48,254 --> 00:02:51,651
+Aguilar en 2026? No es lo que la mayoría esperaría al
+
+43
+00:02:51,747 --> 00:02:56,029
+pensar en un miembro de su familia. Durante los años más recientes,
+
+44
+00:02:56,158 --> 00:02:59,285
+la vida cotidiana de Majo transcurrió lejos del rancho
+
+45
+00:02:59,785 --> 00:03:03,615
+familiar de Zacatecas. Según información publicada por múltiples medios
+
+46
+00:03:04,115 --> 00:03:08,042
+mexicanos, vivió junto al músico Gil Cerezo en una residencia ubicada
+
+47
+00:03:08,542 --> 00:03:11,362
+en una zona residencial tranquila y exclusiva de Monterrey,
+
+48
+00:03:11,426 --> 00:03:15,006
+Nuevo León. La casa no es una mansión recién construida
+
+49
+00:03:15,506 --> 00:03:19,149
+con piscinas infinitas ni cocheras llenas de autos deportivos importados.
+
+50
+00:03:19,599 --> 00:03:23,598
+Es una propiedad construida en los años 80, heredada por los abuelos
+
+51
+00:03:24,098 --> 00:03:27,821
+de Gil, que combina detalles rústicos con algunos elementos más modernos.
+
+52
+00:03:28,496 --> 00:03:31,804
+Lo que más destaca en las descripciones que circularon en medios
+
+53
+00:03:32,304 --> 00:03:35,594
+especializados es la vegetación. Amplios jardines que
+
+54
+00:03:36,094 --> 00:03:39,577
+rodean la casa crean una sensación de quietud sorprendente en
+
+55
+00:03:40,077 --> 00:03:42,919
+medio de una de las ciudades más activas del norte del país.
+
+56
+00:03:43,915 --> 00:03:47,450
+Dentro de la casa hay un detalle que dice bastante sobre cómo es
+
+57
+00:03:47,950 --> 00:03:51,499
+Majo cuando no está sobre un escenario. En la sala conviven discos
+
+58
+00:03:51,999 --> 00:03:55,403
+de vinilo, instrumentos musicales y plantas que crecen con cierta
+
+59
+00:03:55,903 --> 00:03:59,244
+libertad. No es el tipo de espacio que alguien decora pensando en
+
+60
+00:03:59,276 --> 00:04:02,955
+impresionar en fotografías de redes sociales. Es el
+
+61
+00:04:03,455 --> 00:04:07,228
+tipo de espacio donde alguien vive de verdad. Donde las cosas están porque se
+
+62
+00:04:07,728 --> 00:04:11,852
+usan, no porque se exhiben. Gil Cerezo y Majo describieron esa
+
+63
+00:04:12,352 --> 00:04:16,139
+casa en su momento como un oasis personal, un lugar donde
+
+64
+00:04:16,639 --> 00:04:19,816
+era posible desconectarse del ritmo acelerado e incansable
+
+65
+00:04:20,316 --> 00:04:24,392
+que exige la industria del entretenimiento moderno. Y tiene sentido para alguien
+
+66
+00:04:24,892 --> 00:04:28,165
+que pasa meses en gira, que viaja constantemente entre México
+
+67
+00:04:28,665 --> 00:04:31,794
+y Estados Unidos, que graba, ensaya, da entrevistas y
+
+68
+00:04:32,294 --> 00:04:35,518
+aparece en premiaciones televisadas, Poder entrar a una casa donde
+
+69
+00:04:35,550 --> 00:04:39,562
+corre libremente un perro llamado Manolo, y donde hay espacio real
+
+70
+00:04:40,062 --> 00:04:43,301
+para leer en silencio, no es un lujo menor. Sin embargo,
+
+71
+00:04:43,590 --> 00:04:47,762
+a mediados de 2025, múltiples medios mexicanos reportaron
+
+72
+00:04:48,262 --> 00:04:52,079
+el final de la relación entre Majo y Gil. Desde entonces no está claro en
+
+73
+00:04:52,579 --> 00:04:55,866
+qué lugar reside actualmente. Lo que sí está completamente claro
+
+74
+00:04:56,366 --> 00:04:59,910
+es esto: no existe ninguna fuente pública confiable que confirme
+
+75
+00:05:00,022 --> 00:05:03,986
+que Majo Aguilar sea propietaria de un rancho o una finca a su propio
+
+76
+00:05:04,486 --> 00:05:07,850
+nombre. El Rancho El Sollate, ubicado en Villanueva,
+
+77
+00:05:07,882 --> 00:05:11,617
+Zacatecas, es el legado más conocido vinculado a la familia.
+
+78
+00:05:12,050 --> 00:05:15,497
+Fue la propiedad de Antonio Aguilar y Flor Silvestre y
+
+79
+00:05:15,997 --> 00:05:19,954
+sigue siendo uno de los símbolos más reconocidos de la cultura ranchera mexicana.
+
+80
+00:05:20,627 --> 00:05:23,801
+Majo regresa ahí con frecuencia, visita a los animales,
+
+81
+00:05:24,154 --> 00:05:27,889
+pasea entre los campos, se reconecta con sus raíces profundas.
+
+82
+00:05:28,579 --> 00:05:32,458
+En febrero de 2025 grabó el videoclip de su canción
+
+83
+00:05:32,587 --> 00:05:36,469
+Anímate en un lugar cercano al rancho, junto a su equipo de producción.
+
+84
+00:05:37,064 --> 00:05:40,293
+Pero esa propiedad es parte de un legado familiar mucho
+
+85
+00:05:40,793 --> 00:05:44,534
+más grande que ella cuida con genuino respeto, sin intentar apropiarse
+
+86
+00:05:45,034 --> 00:05:47,939
+de él ni presentarlo como propio. Esa diferencia,
+
+87
+00:05:48,148 --> 00:05:51,939
+sutil pero importante, dice mucho sobre quién es Majo Aguilar
+
+88
+00:05:52,439 --> 00:05:55,634
+en realidad y qué tipo de vida eligió construir cuando pudo
+
+89
+00:05:56,134 --> 00:05:59,715
+haber tomado un camino muy distinto. La pregunta que muchas
+
+90
+00:06:00,215 --> 00:06:04,018
+personas se hacen cuando piensan en Majo Aguilar Es sencilla pero reveladora.
+
+91
+00:06:04,370 --> 00:06:08,172
+¿Qué hace concretamente esta joven con su tiempo en 2026?
+
+92
+00:06:08,942 --> 00:06:12,920
+La respuesta tiene dos partes que parecen pertenecer a mundos distintos,
+
+93
+00:06:13,353 --> 00:06:16,209
+pero que en su caso conviven con aparente naturalidad.
+
+94
+00:06:16,882 --> 00:06:20,491
+Por un lado está la agenda pública, que no deja mucho espacio
+
+95
+00:06:20,991 --> 00:06:24,598
+para el descanso. La gira de conciertos de 2026 se
+
+96
+00:06:25,098 --> 00:06:28,672
+extiende entre México y Estados Unidos, con fechas confirmadas en
+
+97
+00:06:29,172 --> 00:06:33,371
+distintas ciudades. El punto más alto de ese calendario es la presentación
+
+98
+00:06:33,419 --> 00:06:37,171
+en solitario en el Auditorio Nacional de Ciudad de México el 13
+
+99
+00:06:37,671 --> 00:06:41,212
+de noviembre de 2026. Llegar a ese escenario con el propio
+
+100
+00:06:41,712 --> 00:06:45,189
+nombre en el cartel es una prueba concreta de que la carrera que Majo ha
+
+101
+00:06:45,689 --> 00:06:49,246
+construido paso a paso ya no vive a la sombra del apellido familiar.
+
+102
+00:06:49,855 --> 00:06:53,014
+Ese boleto lo vendió ella, con su nombre y con su voz.
+
+103
+00:06:53,864 --> 00:06:57,103
+A eso se suma su presencia activa en plataformas digitales.
+
+104
+00:06:57,777 --> 00:07:01,883
+Sus canciones, videos de mariachi y actuaciones en vivo circulan
+
+105
+00:07:02,383 --> 00:07:05,796
+en Spotify, Apple Music, YouTube y otras plataformas
+
+106
+00:07:06,296 --> 00:07:09,132
+donde millones de personas consumen música regional mexicana.
+
+107
+00:07:09,645 --> 00:07:13,495
+Los premios llegaron ese mismo año. 2 reconocimientos en Premio
+
+108
+00:07:13,995 --> 00:07:17,392
+Lo Nuestro, incluyendo Artista Femenina del Año en Música Mexicana,
+
+109
+00:07:17,745 --> 00:07:21,595
+confirman que su nombre ya no necesita ningún apellido para sostenerse
+
+110
+00:07:21,627 --> 00:07:25,284
+solo. Pero cuando baja del escenario aparece la otra
+
+111
+00:07:25,784 --> 00:07:29,341
+cara de Majo. La que el público raramente imagina. Con frecuencia
+
+112
+00:07:29,373 --> 00:07:32,131
+comparte viajes por distintas regiones de México,
+
+113
+00:07:32,420 --> 00:07:36,316
+disfruta de la gastronomía local, aprovecha paisajes naturales
+
+114
+00:07:36,364 --> 00:07:40,389
+y busca el mar cuando necesita recuperar energías. Los atardeceres
+
+115
+00:07:40,889 --> 00:07:44,494
+frente a la playa aparecen con regularidad en sus momentos más personales.
+
+116
+00:07:45,585 --> 00:07:48,776
+Y cuando le preguntaron directamente en una conversación con las
+
+117
+00:07:49,276 --> 00:07:52,784
+conductoras de Vogue México y Vogue Latinoamérica qué hacía en su tiempo
+
+118
+00:07:53,284 --> 00:07:57,176
+libre, Su respuesta fue tan simple que sorprendió a más de uno: leer
+
+119
+00:07:57,288 --> 00:08:00,894
+y jugar Zelda en Nintendo Switch. Agregó que trata de usar
+
+120
+00:08:01,394 --> 00:08:05,205
+el teléfono lo menos posible, aunque reconoció con honestidad que no siempre
+
+121
+00:08:05,705 --> 00:08:09,324
+lo logra. Esa imagen de una artista que llena el Auditorio Nacional
+
+122
+00:08:09,788 --> 00:08:13,234
+y en su tiempo libre juega videojuegos y lee libros no
+
+123
+00:08:13,734 --> 00:08:16,792
+encaja con ninguna fantasía de exceso ni de glamour heredado.
+
+124
+00:08:17,321 --> 00:08:20,526
+Y quizás por eso mucha gente la siente más cercana de lo que
+
+125
+00:08:21,026 --> 00:08:23,763
+imaginaría al pensar en alguien con el apellido Aguilar.
+
+126
+00:08:24,277 --> 00:08:28,050
+Cuando se habla del valor económico detrás del nombre de Majo Aguilar en
+
+127
+00:08:28,550 --> 00:08:32,321
+2026, lo primero que muchas personas hacen es pensar en
+
+128
+00:08:32,821 --> 00:08:36,528
+una herencia directa de la familia Aguilar. Es un reflejo comprensible.
+
+129
+00:08:37,459 --> 00:08:40,782
+El apellido lleva décadas asociado a fortunas considerables,
+
+130
+00:08:41,232 --> 00:08:44,748
+a propiedades emblemáticas y a contratos multimillonarios en
+
+131
+00:08:45,248 --> 00:08:48,489
+la industria musical mexicana e internacional. Sin embargo,
+
+132
+00:08:48,939 --> 00:08:52,584
+hasta la fecha no existe ninguna cifra oficial sobre el patrimonio
+
+133
+00:08:52,648 --> 00:08:56,261
+neto de Majo Aguilar publicada por ella misma ni por su equipo
+
+134
+00:08:56,761 --> 00:09:00,965
+de trabajo. A diferencia de otros artistas cuyas fortunas han sido documentadas
+
+135
+00:09:01,465 --> 00:09:05,252
+por medios especializados como Celebrity Net Worth, el caso de Majo sigue
+
+136
+00:09:05,752 --> 00:09:09,491
+siendo opaco en ese sentido específico. Por eso, más que intentar
+
+137
+00:09:09,991 --> 00:09:13,634
+adivinar cuánto dinero posee exactamente, tiene más sentido observar
+
+138
+00:09:13,650 --> 00:09:17,070
+cómo está construyendo valor económico real con su propia carrera.
+
+139
+00:09:18,162 --> 00:09:21,437
+El primer pilar es el contrato discográfico. En enero
+
+140
+00:09:21,937 --> 00:09:26,010
+de 2025, durante un evento en Ciudad de México, Majo renovó
+
+141
+00:09:26,026 --> 00:09:29,781
+oficialmente su vínculo con Fonovisa Records y Universal Music
+
+142
+00:09:30,281 --> 00:09:32,959
+Latin, sello con el que trabaja desde 2019.
+
+143
+00:09:33,568 --> 00:09:36,714
+Ante Billboard Español, declaró en esa ocasión: Este
+
+144
+00:09:37,214 --> 00:09:40,581
+nuevo capítulo con Fonovisa y Universal es muy especial para mí.
+
+145
+00:09:41,030 --> 00:09:44,496
+Haciendo una comparación de la primera vez que firmé a esta renovación,
+
+146
+00:09:44,801 --> 00:09:48,123
+hay un camino donde hemos conquistado ya muchos sueños y metas.
+
+147
+00:09:48,638 --> 00:09:52,447
+Las palabras no eran retórica vacía, reflejaban 6
+
+148
+00:09:52,947 --> 00:09:56,675
+años de trabajo constante, álbum tras álbum, proyecto tras proyecto,
+
+149
+00:09:56,949 --> 00:10:00,258
+sin atajos. El segundo pilar es la presencia
+

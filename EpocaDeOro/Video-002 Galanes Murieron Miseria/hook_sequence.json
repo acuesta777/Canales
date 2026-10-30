@@ -1,0 +1,37 @@
+[
+  {
+    "type": "foto",
+    "nombre": "PEDRO ARMENDARIZ",
+    "prefix": "01_pedro_armendariz",
+    "photo_path": "/Users/anyelocuesta/Downloads/Canales/EpocaDeOro/Video-002 Galanes Murieron Miseria/hook-motion/01_pedro_armendariz_01.jpg",
+    "has_photo": true
+  },
+  {
+    "type": "clip",
+    "nombre": "PEDRO ARMENDARIZ",
+    "path": "/Users/anyelocuesta/Library/Mobile Documents/com~apple~CloudDocs/Artistas/PEDRO ARMENDÁRIZ JR/clip_0001.mp4",
+    "filename": "clip_0001.mp4",
+    "total": 145
+  },
+  {
+    "type": "foto",
+    "nombre": "PEDRO ARMENDARIZ",
+    "prefix": "01_pedro_armendariz",
+    "photo_path": "/Users/anyelocuesta/Downloads/Canales/EpocaDeOro/Video-002 Galanes Murieron Miseria/hook-motion/01_pedro_armendariz_02.jpg",
+    "has_photo": true
+  },
+  {
+    "type": "clip",
+    "nombre": "JORGE NEGRETE",
+    "path": "/Users/anyelocuesta/Library/Mobile Documents/com~apple~CloudDocs/Artistas/Jorge Negrete/100_62_La Triste Historia de Jorge Negrete con Maria Félix  fue por despecho(1)-00.02.20.000-00.02.27.000-seg021.mp4",
+    "filename": "100_62_La Triste Historia de Jorge Negrete con Maria Félix  fue por despecho(1)-00.02.20.000-00.02.27.000-seg021.mp4",
+    "total": 103
+  },
+  {
+    "type": "foto",
+    "nombre": "JORGE NEGRETE",
+    "prefix": "02_jorge_negrete",
+    "photo_path": "/Users/anyelocuesta/Downloads/Canales/EpocaDeOro/Video-002 Galanes Murieron Miseria/hook-motion/02_jorge_negrete_01.jpg",
+    "has_photo": true
+  }
+]

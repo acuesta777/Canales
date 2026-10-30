@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Verdad Dorada — Nombre Artista</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: transparent;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+    }
+
+    .clip {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+    }
+
+    /*
+      Lower-third: zona inferior de la pantalla.
+      Fondo oscuro semi-transparente para legibilidad sobre cualquier clip.
+    */
+    .lower-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 100%);
+      opacity: 0;
+    }
+
+    /* Línea dorada superior del bloque */
+    .accent-line {
+      position: absolute;
+      bottom: 148px;
+      left: 80px;
+      height: 3px;
+      width: 0;
+      background: #C9A227;
+      opacity: 0;
+    }
+
+    /* Número de artista — pequeño, encima del nombre */
+    .artista-num {
+      position: absolute;
+      bottom: 132px;
+      left: 82px;
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: 0.25em;
+      color: #C9A227;
+      text-transform: uppercase;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    /* Nombre principal del artista */
+    .artista-nombre {
+      position: absolute;
+      bottom: 70px;
+      left: 76px;
+      font-family: 'Arial Black', 'Arial', sans-serif;
+      font-weight: 900;
+      font-size: 72px;
+      letter-spacing: 0.06em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      opacity: 0;
+      will-change: transform, opacity;
+      /* Sombra para legibilidad sobre clips claros */
+      text-shadow: 0 2px 24px rgba(0,0,0,0.7), 0 0 2px rgba(0,0,0,0.9);
+    }
+
+    /* Línea inferior decorativa bajo el nombre */
+    .accent-line-bottom {
+      position: absolute;
+      bottom: 58px;
+      left: 80px;
+      height: 2px;
+      width: 0;
+      background: rgba(201, 162, 39, 0.5);
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="clip" data-start="0" data-duration="3"
+     data-composition-id="nombre-reveal" data-width="1920" data-height="1080"
+     id="nombre-reveal">
+
+  <!-- Fondo degradado inferior -->
+  <div class="lower-bg" id="lower-bg"></div>
+
+  <!-- Línea dorada superior -->
+  <div class="accent-line" id="accent-line-top"></div>
+
+  <!-- Nombre: LUPE VÉLEZ -->
+  <div class="artista-nombre" id="artista-nombre">LUPE VÉLEZ</div>
+
+  <!-- Línea inferior decorativa -->
+  <div class="accent-line-bottom" id="accent-line-bottom"></div>
+
+</div>
+
+<script>
+(function () {
+  var DUR    = 3.0;
+  var HOLD   = 2.0;   // tiempo visible antes del fade-out
+  var XFADE  = 0.4;
+
+  var tl = gsap.timeline({ paused: true });
+  window.__timelines = window.__timelines || {};
+  window.__timelines["nombre-reveal"] = tl;
+
+  // 1. Fondo degradado
+  tl.fromTo("#lower-bg",
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" },
+    0
+  );
+
+  // 2. Línea dorada superior — expand desde izquierda
+  tl.fromTo("#accent-line-top",
+    { width: 0, opacity: 0 },
+    { width: 480, opacity: 1, duration: 0.45, ease: "power3.out" },
+    0.05
+  );
+
+  // 3. Nombre del artista — slide-up desde abajo, bold entrance
+  tl.fromTo("#artista-nombre",
+    { opacity: 0, y: 40 },
+    { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" },
+    0.3
+  );
+
+  // 5. Línea inferior
+  tl.fromTo("#accent-line-bottom",
+    { width: 0, opacity: 0 },
+    { width: 360, opacity: 1, duration: 0.4, ease: "power3.out" },
+    0.55
+  );
+
+  // 6. Fade-out general al final (t=2.6 → t=3.0)
+  tl.to("#nombre-reveal",
+    { opacity: 0, duration: XFADE, ease: "power2.in" },
+    DUR - XFADE
+  );
+
+})();
+</script>
+
+</body>
+</html>

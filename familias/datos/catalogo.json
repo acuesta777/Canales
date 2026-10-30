@@ -1,0 +1,66 @@
+{
+  "videos": [
+    {
+      "slug": "azcarraga",
+      "sujeto": "Familia Azcárraga / Televisa",
+      "titulo": "La Familia que FABRICÓ lo que México Veía… Setenta Años de Monopolio y Una Caída que Todavía No Termina",
+      "categoria": "familias-que-sobrevivieron-a-los-presidentes",
+      "pais": "México",
+      "duracion": "28:12",
+      "fecha_produccion": "2026-08-30",
+      "privacidad": "private",
+      "archivo": "familias/azcarraga/azcarraga_final.mp4"
+    },
+    {
+      "slug": "salinas-pliego",
+      "sujeto": "Ricardo Salinas Pliego / Grupo Salinas",
+      "titulo": "La Familia que COMPRÓ la TV de MÉXICO por Nada — Hoy Son DUEÑOS de tu BANCO y tu CELULAR",
+      "categoria": "las-familias-que-sobrevivieron-a-los-presidentes",
+      "pais": "México",
+      "duracion": "28:17",
+      "fecha_produccion": "2026-08-30",
+      "privacidad": "private",
+      "archivo": "familias/salinas-pliego/salinas-pliego_final.mp4"
+    },
+    {
+      "slug": "mendoza-polar",
+      "titulo": "La Familia MÁS RICA de VENEZUELA… Son DUEÑOS de tu Harina PAN y tu Cerveza",
+      "sujeto": "Familia Mendoza / Empresas Polar",
+      "pais": "Venezuela",
+      "fecha_render": "2026-09-01",
+      "duracion_min": 28.7,
+      "estado": "private",
+      "archivo_final": "familias/mendoza-polar/mendoza-polar_final.mp4",
+      "peso_mb": 748,
+      "tags": [
+        "Harina PAN",
+        "Cervecería Polar",
+        "Familia Mendoza",
+        "Venezuela",
+        "Empresas Polar"
+      ]
+    },
+    {
+      "slug": "familia-colombiana-eeuu",
+      "sujeto": "Familia Santo Domingo / Bavaria / AB InBev",
+      "titulo": "La Familia Colombiana MÁS RICA de EE.UU. — Ni la Migra Puede Tocarlos",
+      "categoria": "mexicanos-mas-ricos-de-eeuu",
+      "pais": "Colombia",
+      "duracion": "28:55",
+      "fecha_produccion": "2026-09-01",
+      "privacidad": "private",
+      "archivo": "familias/familia-colombiana-eeuu/familia-colombiana-eeuu_final.mp4"
+    },
+    {
+      "slug": "nemesio-camacho",
+      "sujeto": "Nemesio Camacho",
+      "titulo": "El Español MÁS RICO de COLOMBIA… Un Decreto le Quitó su Estadio y Cambió BOGOTÁ para Siempre",
+      "categoria": "los-que-construyeron-ciudades",
+      "pais": "Colombia",
+      "duracion": "30:25",
+      "fecha_produccion": "2026-09-17",
+      "privacidad": "private",
+      "archivo": "familias/nemesio-camacho/nemesio-camacho_final.mp4"
+    }
+  ]
+}

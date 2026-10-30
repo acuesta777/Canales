@@ -1,0 +1,31 @@
+{
+  "queue": [],
+  "history": [
+    {
+      "id": "5c5c5c81",
+      "nombre": "Aprobar Footage — riqueza/antonio_aguilar_jr/",
+      "personaje": "riqueza/antonio_aguilar_jr/",
+      "carpeta": "riqueza/antonio_aguilar_jr/",
+      "render_script": "render.py",
+      "status": "done",
+      "added_at": "2026-10-12T22:05:20.760910",
+      "started_at": "2026-10-12T22:37:20.615174",
+      "finished_at": "2026-10-12T22:38:38.824986",
+      "output": " accelerated colorspace conversion found from yuv420p to bgr24.\n[swscaler @ 0x74d53a0000] [swscaler @ 0x74e0010000] No accelerated colorspace conversion found from yuv420p to bgr24.\n[swscaler @ 0x74d53a0000] [swscaler @ 0x74d7bb4000] No accelerated colorspace conversion found from yuv420p to bgr24.\n",
+      "canal": "Fama Y Caida"
+    },
+    {
+      "id": "238ed397",
+      "nombre": "Aprobar Footage — riqueza/v2_julion_alvarez/",
+      "personaje": "riqueza/v2_julion_alvarez/",
+      "carpeta": "riqueza/v2_julion_alvarez/",
+      "render_script": "render.py",
+      "status": "done",
+      "added_at": "2026-10-12T22:28:54.099759",
+      "started_at": "2026-10-12T22:38:39.168828",
+      "finished_at": "2026-10-12T22:40:00.138900",
+      "output": " accelerated colorspace conversion found from yuv420p to bgr24.\n[swscaler @ 0x78737d0000] [swscaler @ 0x7868410000] No accelerated colorspace conversion found from yuv420p to bgr24.\n[swscaler @ 0x78737d0000] [swscaler @ 0x7869bdc000] No accelerated colorspace conversion found from yuv420p to bgr24.\n",
+      "canal": "Expediente de Famosos"
+    }
+  ]
+}
