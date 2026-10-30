@@ -16,6 +16,9 @@
 # Zips y archivos grandes
 *.zip
 *.tar.gz
+*.dmg
+*.pkg
+*.iso
 
 # Carpetas de clips e imágenes generadas
 riqueza/*/clips/
